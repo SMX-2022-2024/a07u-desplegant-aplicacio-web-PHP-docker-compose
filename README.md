@@ -256,9 +256,8 @@ volumes:
     mysql-data:
 ```
 
-> [!WARNING]
-> Si us dona un error, fixeu-vos que a la variable de sistema **```MYSQL_DATABASE```** cal que en comptes de **```<nom de la vostra base de dades>```**, hi poseu en nom de la vostra base de dades, que us he facilitat a la [taula dels grups](#taula-dels-grups) que apareix a l'inici.
-
+> # [!WARNING]
+> # Si us dona un error, fixeu-vos que a la variable de sistema **```MYSQL_DATABASE```** cal que en comptes de la cadena de lletres **```<nom de la vostra base de dades>```**, hi poseu en nom de la vostra base de dades, que us he facilitat a la [taula dels grups](#taula-dels-grups) que apareix a l'inici.
 
 ## Pas 9: Arrencar el nostre sistema de contenidors
 
