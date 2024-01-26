@@ -2,9 +2,15 @@
 
 Els grups han quedat de la següent manera:
 
+|A |B
+|--|--
+|1<td rowspan="2">3</td>|2
+|4|5
+|6|7 
+
 |Id|Alumne/a|Grup|Membres|Nom Base de dades|usuari|contrasenya|
 |:---|---|:---|:---:|:---|:---|:---|
-|7312|Agustí Corbella, Oriol|<td rowspan="2">Grup 01</td>|<td rowspan="2">agusti-roman|<td rowspan="2">agustiroman</td>|<td rowspan="2">agustiroman123</td>|
+|7312|Agustí Corbella, Oriol<td rowspan="2">Grup 01</td><td rowspan="2">agusti-roman</td><td rowspan="2">agustiroman</td><td rowspan="2">agustiroman123</td>|
 |7422|Román Robles, Àlex|
 |7674|Boada Cirera, Jan|Grup 02|2|boada-cot|boadacot|boadacot123|
 |7596|Cot Fontanella, Marc|Grup 02|2|boada-cot|boadacot|boadacot123|
