@@ -9,7 +9,7 @@ Els grups han quedat de la següent manera:
     <th rowspan="2">Nom</th><th rowspan="2">Usuari</th><th rowspan="2">contrasenya</th>
   </tr>
   <tr>
-    <th></th>
+    <th>1</th>
   </tr>
 
   <tr>
