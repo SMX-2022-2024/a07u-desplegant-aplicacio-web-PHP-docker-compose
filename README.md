@@ -1,6 +1,9 @@
 # a07u - Desplegant una aplicació web PHP amb Docker Compose, Nginx i MariaDB
 
 Els grups han quedat de la següent manera:
+
+### Taula dels grups
+
 <table>
   <tr>
     <th rowspan="3">Id</th>
@@ -246,12 +249,16 @@ services:
         -    mysql-data:/var/lib/mysql
       environment:  
        MYSQL_ROOT_PASSWORD: mariadb
-       MYSQL_DATABASE: nieto-pardo 
+       MYSQL_DATABASE: <nom de la vostra base de dades> 
 
 
 volumes:
     mysql-data:
 ```
+
+> ![WARNING]: NOTA
+> Si us dona un error, fixeu-vos que a la variable de sistema **```MYSQL_DATABASE```** cal que en comptes de **```<nom de la vostra base de dades>```**, hi poseu en nom de la vostra base de dades, que us he facilitat a la [taula dels grups](#taula-dels-grups) que apareix a l'inici.
+
 
 ## Pas 9: Arrencar el nostre sistema de contenidors
 
