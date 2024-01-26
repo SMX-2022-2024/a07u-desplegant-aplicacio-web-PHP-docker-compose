@@ -2,6 +2,10 @@
 
 Els grups han quedat de la següent manera:
 <table>
+  <col>
+    <colgroup style="withd: 100 px;">
+    </colgroup>
+  </col>
   <tr>
     <th>Id</th><th>Alumne/a</th><th>Grup</th><th>quantitat<br>alumnes</th><th>Nom de la<br>Base de dades</th><th>Usuari de la<br>Base de dades</th><th>contrasenya</th>
   </tr>
