@@ -6,7 +6,7 @@ Els grups han quedat de la següent manera:
     <th rowspan="3">Id</th>
     <th rowspan="3">Alumne/a</th>
     <th rowspan="3">Grup</th>
-    <th colspan="3">Informació de la<br>base de dades</th>
+    <th colspan="3"><b>Informació de la base de dades</b></th>
   </tr>
   <tr>
     <th rowspan="2">Nom de la<br>base de dades</th>
