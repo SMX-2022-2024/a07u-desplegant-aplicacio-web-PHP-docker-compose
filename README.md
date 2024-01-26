@@ -21,6 +21,8 @@ Els grups han quedat de la següent manera:
     <td>7312</td><td>Agustí Corbella, Oriol</td><td rowspan="2">Grup&nbsp;01</td><td rowspan="2">agusti-roman</td><td rowspan="2">agustiroman</td><td rowspan="2">agustiroman123</td>
   </tr>
   <tr>
+  </tr>
+  <tr>
   <td>7422</td><td>Román Robles, Àlex</td>
 </tr>
 <tr><td>7674</td><td>Boada Cirera, Jan</td><td rowspan="2">Grup&nbsp;02</td><td rowspan="2">boada-cot</td><td rowspan="2">boadacot</td><td rowspan="2">boadacot123</td></tr>
