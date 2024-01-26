@@ -3,13 +3,13 @@
 Els grups han quedat de la següent manera:
 <table>
   <tr>
-    <th rowspan="3">Id</th><th rowspan="3">Alumne/a</th><th rowspan="3">Grup</th><th colspan="3">De la base de dades</th></tr>
+    <th rowspan="3">Id</th>
+    <th rowspan="3">Alumne/a</th>
+    <th rowspan="3">Grup</th>
+    <th colspan="3">De la base de dades</th>
   </tr>
   <tr>
     <th rowspan="2">Nom</th><th rowspan="2">Usuari</th><th rowspan="2">contrasenya</th>
-  </tr>
-  <tr>
-    <th>1</th>
   </tr>
 
   <tr>
