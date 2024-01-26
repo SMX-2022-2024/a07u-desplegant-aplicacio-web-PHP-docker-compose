@@ -42,13 +42,13 @@ Els grups han quedat de la següent manera:
 <tr><td>7614</td><td>Soler Sampere, Arnau</td></tr>
 <tr><td>7532</td><td>Martinez Segú, Eric</td><td rowspan="2">Grup&nbsp;12</td><td rowspan="2">martinez-moreno</td><td rowspan="2">martinezmoreno</td><td rowspan="2">martinezmoreno123</td></tr>
 <tr><td>7684</td><td>Moreno Fernández, Nil</td></tr>
-<tr><td>7260</td><td>Navarro Galan, Gerard</td><td rowspan="3">Grup&nbsp;13</td><td rowspan="3">navarro-rueda-selles</td><td rowspan="3">navarroruedaselles</td><td rowspan="3">navarroruedaselles123</td></tr>
+<tr><td>7672</td><td>Pan , Le</td><td rowspan="2">Grup&nbsp;13</td><td rowspan="2">pan-sacristan</td><td rowspan="2">pansacristan</td><td rowspan="2">pansacristan123</td></tr>
+<tr><td>7836</td><td>Sacristan Castillo, Marc</td></tr>
+<tr><td>7581</td><td>Putellas Martín, Pol</td><td rowspan="2">Grup&nbsp;14</td><td rowspan="2">putellas-vazquez</td><td rowspan="2">putellasvazquez</td><td rowspan="2">putellasvazquez123</td></tr>
+<tr><td>7632</td><td>Vázquez Pelàez, Alex</td></tr>
+<tr><td>7260</td><td>Navarro Galan, Gerard</td><td rowspan="3">Grup&nbsp;15</td><td rowspan="3">navarro-rueda-selles</td><td rowspan="3">navarroruedaselles</td><td rowspan="3">navarroruedaselles123</td></tr>
 <tr><td>7668</td><td>Rueda Guàrdia, Marc</td></tr>
 <tr><td>7459</td><td>Sellés Puyol, Aniol</td></tr>
-<tr><td>7672</td><td>Pan , Le</td><td rowspan="2">Grup&nbsp;14</td><td rowspan="2">pan-sacristan</td><td rowspan="2">pansacristan</td><td rowspan="2">pansacristan123</td></tr>
-<tr><td>7836</td><td>Sacristan Castillo, Marc</td></tr>
-<tr><td>7581</td><td>Putellas Martín, Pol</td><td rowspan="2">Grup&nbsp;15</td><td rowspan="2">putellas-vazquez</td><td rowspan="2">putellasvazquez</td><td rowspan="2">putellasvazquez123</td></tr>
-<tr><td>7632</td><td>Vázquez Pelàez, Alex</td></tr>
 </table>
 
 ## Pas 1: Comprovació de que tenim descarregades les imatges.
