@@ -82,7 +82,6 @@ Com a ***primer*** i ***segon*** alumne s'enten l'ordre que queda una cop que el
 
 Per exemple, en el cas de que els cognoms dels alumnes fossin, **Joan Pardo** i **Iván Nieto**, el nom de la carpeta seria **```nieto-pardo```**, ja que **Nieto** està en primera posició si ordenem els cognoms alfabeticament.
 
-
 * Comanda a executar:
 
 ```bash
@@ -147,7 +146,6 @@ sudo vi ~/nieto-pardo/webSrv/Dockerfile
 
 I el contingut del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/webSrv/default.conf```** és el següent:
 
-
 ```
 server {  
 
@@ -191,28 +189,37 @@ server {
 
 ## Pas 6: Descarrega d'una pàgina ja existent, escrita en ```php```, per mostrar informació.
 
+* Comanda a executar:
+
 ```bash
 sudo git clone https://github.com/rapidcode-technologies-private-limited/php-e-commerce.git ~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/
 ```
 
 ## Pas 7: Creació del fitxer ***```Dockerfile```*** per la configuració del contenidor ```php``` del nostre sistema de contenidors.
 
+* Comanda a executar:
+
 ```
 sudo vi ~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/Dockerfile
 ```
 
-I el contingut del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/Dockerfile```** és el següent:
+El contingut del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/Dockerfile```** és el següent:
 
-
-```sql
+```bash
 FROM php:7.0-fpm
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 RUN docker-php-ext-enable mysqli
 ```
 
+## Pas 8: Creació del fitxer ***```docker-compose.yml```*** per la configuració del nostre sistema de contenidors.
+
+* Comanda a executar:
+
 ```bash
 sudo vi ~/<CognomAlumne1>-<CognomAlumne2>/docker-compose.yml
 ```
+
+El contingut del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/docker-compose.yml```** és el següent:
 
 ```yml
 version: "3.9"
@@ -246,8 +253,31 @@ volumes:
     mysql-data:
 ```
 
+## Pas 9: Executar una comanda al contenidor de base de dades
+
+Primer cal coneixer quin és el nom del contenidor de base de dades.
+
+* Comanda a executar:
+```bash
+sudo docker container list -a | grep db-1
+```
+
+* **Sortida**:
+
+<pre>
+joan@ubuntudocker2:~/nieto-pardo$ sudo docker container list -a | grep db-1
+12102f51fbf1   mariadb  "docker-entrypoint.s…"   18 seconds ago   Up 16 seconds   3306/tcp  nieto-pardo-db-1
+joan@ubuntudocker2:~/nieto-pardo$
+</pre>
+
+En el nostre cas el nom del contenidor és **```nieto-pardo-db-1```**.
+
+Per tant, per executar una comanda dins del contenidor de base de dades, cal executar la següent comanda:
+
+```bash
 sudo docker exec -ti nieto-pardo-db-1 bash
-mariadb -u root -pmariadb
+```
+
 
 ```sql
 CREATE USER 'nietopardo'@'%' IDENTIFIED BY "nietopardo123";
