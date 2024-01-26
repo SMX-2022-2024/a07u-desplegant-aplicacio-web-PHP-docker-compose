@@ -12,6 +12,7 @@ Els grups han quedat de la següent manera:
 |:---|---|:---|:---:|:---|:---|:---
 <table>
 <tr>
+<td>Id</td><td>Alumne/a</td><td>Grup</td><td>Membres</td><td>Nom Base de dades</td><td>usuari</td><td>contrasenya</td>
 <td>7312</td><td>Agustí Corbella, Oriol</td><td rowspan="2">3Grup 01</td><td rowspan="2">42</td><td rowspan="2">5agusti-roman</td><td rowspan="2">6agustiroman</td><td rowspan="2" colspan="6">7agustiroman123</td>
 <td>7422</td><td>Román Robles, Àlex</td>
 </tr>
