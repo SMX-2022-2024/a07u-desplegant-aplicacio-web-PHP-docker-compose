@@ -2,15 +2,6 @@
 
 Els grups han quedat de la següent manera:
 <table>
-    <colgroup>
-      <col width="20"></col>
-      <col width="10"></col>
-      <col width="50"></col>
-      <col width="20"></col>
-      <col width="20"></col>
-      <col width="20"></col>
-      <col width="20"></col>
-    </colgroup>
   <tr>
     <th rowspan="3">Id</th><th rowspan="3">Alumne/a</th><th rowspan="3">Grup</th><th colspan="3">De la base de dades</th></tr>
   </tr>
@@ -19,8 +10,6 @@ Els grups han quedat de la següent manera:
   </tr>
   <tr>
     <td>7312</td><td>Agustí Corbella, Oriol</td><td rowspan="2">Grup&nbsp;01</td><td rowspan="2">agusti-roman</td><td rowspan="2">agustiroman</td><td rowspan="2">agustiroman123</td>
-  </tr>
-  <tr>
   </tr>
   <tr>
   <td>7422</td><td>Román Robles, Àlex</td>
