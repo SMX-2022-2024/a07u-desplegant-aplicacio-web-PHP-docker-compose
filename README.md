@@ -9,9 +9,9 @@ Els grups han quedat de la següent manera:
     <th colspan="3"><b>Informació de la base de dades</b></th>
   </tr>
   <tr>
-    <th rowspan="2">Nom de la<br>base de dades</th>
-    <th rowspan="2">Usuari de connexió<br>a la base de dades</th>
-    <th rowspan="2">Contrasenya<br>de l'uUsuari de connexió</th>
+    <th rowspan="2">Nom de la base de dades</th>
+    <th rowspan="2">Usuari de connexió a la base de dades</th>
+    <th rowspan="2">Contrasenya de l'uUsuari de connexió</th>
   </tr>
   <tr></tr>
   <tr>
