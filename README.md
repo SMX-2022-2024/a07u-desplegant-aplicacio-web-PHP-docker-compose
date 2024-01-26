@@ -13,42 +13,38 @@ Els grups han quedat de la següent manera:
 <table>
 <tr>
 <td>Id</td><td>Alumne/a</td><td>Grup</td><td>Membres</td><td>Nom Base de dades</td><td>usuari</td><td>contrasenya</td></tr>
-<td>7312</td><td>Agustí Corbella, Oriol</td><td rowspan="2">3Grup 01</td><td rowspan="2">42</td><td rowspan="2">5agusti-roman</td><td rowspan="2">6agustiroman</td><td rowspan="2" colspan="6">7agustiroman123</td></tr>
+<td>7312</td><td>Agustí Corbella, Oriol</td><td rowspan="2">Grup 01</td><td rowspan="2">2</td><td rowspan="2">agusti-roman</td><td rowspan="2">agustiroman</td><td rowspan="2" colspan="6">agustiroman123</td></tr>
 <tr><td>7422</td><td>Román Robles, Àlex</td></tr>
+<tr><td>7674</td><td>Boada Cirera, Jan</td><td rowspan="2">Grup 02</td><td rowspan="2">2</td><td rowspan="2">boada-cot</td><td rowspan="2">boadacot</td><td rowspan="2">boadacot123</td></tr>
+<tr><td>7596</td><td>Cot Fontanella, Marc</td></tr>
+<tr><td>7582</td><td>Bollero Ruzafa, Ivan</td><td rowspan="2">Grup 03</td><td rowspan="2">2</td><td rowspan="2">bollero-pan</td><td rowspan="2">bolleropan</td><td rowspan="2">bolleropan123</td></tr>
+<tr><td>7683</td><td>Pan , Jiahao</td><td rowspan="2">Grup 03</td><td rowspan="2">2</td><td rowspan="2">bollero-pan</td><td rowspan="2">bolleropan</td><td rowspan="2">bolleropan123</td></tr>
+<tr><td>7572</td><td>Capel Vallbona, Marc</td><td rowspan="2">Grup 04</td><td rowspan="2">2</td><td rowspan="2">capel-codina</td><td rowspan="2">capelcodina</td><td rowspan="2">capelcodina123</td></tr>
+<tr><td>7604</td><td>Codina Garcia, Aleix</td><td rowspan="2">Grup 04</td></tr>
+<tr><td>2708</td><td>Casas Lopez, Raul</td><td rowspan="2">Grup 05</td><td rowspan="2">2</td><td rowspan="2">casas-sardana</td><td rowspan="2">casassardana</td><td rowspan="2">casassardana123</td></tr>
+<tr><td>7653</td><td>Sardaña Trinh, Marc</td></tr>
+<tr><td>7579</td><td>Córdoba Xandri, Oriol</td><td rowspan="2">Grup 06</td><td rowspan="2">2</td><td rowspan="2">cordoba-puriy</td><td rowspan="2">cordobapuriy</td><td rowspan="2">cordobapuriy123</td></tr>
+<tr><td>7659</td><td>Puriy Puriy, Nicolas</td></tr>
+<tr><td>7636</td><td>Deus Jurado, Izan</td><td rowspan="2">Grup 07</td><td rowspan="2">2</td><td rowspan="2">deus-ortiz</td><td rowspan="2">deusortiz</td><td rowspan="2">deusortiz123</td></tr>
+<tr><td>7576</td><td>Ortiz Guerrero, Antoni</td></tr>
+<tr><td>7627</td><td>Gálvez Comajuan, Marc</td><td rowspan="2">Grup 08</td><td rowspan="2">2</td><td rowspan="2">galvez-sohl</td><td rowspan="2">galvezsohl</td><td rowspan="2">galvezsohl123</td></tr>
+<tr><td>7710</td><td>Sohl Brenes, Martin Albert</td></tr>
+<tr><td>7598</td><td>Garcia Fernández, Adrià</td><td rowspan="2">Grup 09</td><td rowspan="2">2</td><td rowspan="2">garcia-morales</td><td rowspan="2">garciamorales</td><td rowspan="2">garciamorales123</td></tr>
+<tr><td>7473</td><td>Morales Gonzalez, Jan</td><td rowspan="2">Grup 09</td></tr>
+<tr><td>7673</td><td>Garcia Romero, Arnau</td><td rowspan="2">Grup 10</td><td rowspan="2">2</td><td rowspan="2">garcia-royuela</td><td rowspan="2">garciaroyuela</td><td rowspan="2">garciaroyuela123</td></tr>
+<tr><td>7799</td><td>Royuela Martín, Oriol</td><td rowspan="2">Grup 10</td></tr>
+<tr><td>7500</td><td>Lamela Garcia, Alvaro Haoan</td><td rowspan="2">Grup 11</td><td rowspan="2">2</td><td rowspan="2">lamela-soler</td><td rowspan="2">lamelasoler</td><td rowspan="2">lamelasoler123</td></tr>
+<tr><td>7614</td><td>Soler Sampere, Arnau</td><td rowspan="2">Grup 11</td></tr>
+<tr><td>7532</td><td>Martinez Segú, Eric</td><td rowspan="2">Grup 12</td><td rowspan="2">2</td><td rowspan="2">martinez-moreno</td><td rowspan="2">martinezmoreno</td><td rowspan="2">martinezmoreno123</td></tr>
+<tr><td>7684</td><td>Moreno Fernández, Nil</td><td rowspan="2">Grup 12</td></tr>
+<tr><td>7260</td><td>Navarro Galan, Gerard</td><td rowspan="2">Grup 13</td><td rowspan="2">3</td><td rowspan="2">navarro-rueda-selles</td><td rowspan="2">navarroruedaselles</td><td rowspan="2">navarroruedaselles123</td></tr>
+<tr><td>7668</td><td>Rueda Guàrdia, Marc</td><td rowspan="2">Grup 13</td></tr>
+<tr><td>7459</td><td>Sellés Puyol, Aniol</td><td rowspan="2">Grup 13</td></tr>
+<tr><td>7672</td><td>Pan , Le</td><td rowspan="2">Grup 14</td><td rowspan="2">2</td><td rowspan="2">pan-sacristan</td><td rowspan="2">pansacristan</td><td rowspan="2">pansacristan123</td></tr>
+<tr><td>7836</td><td>Sacristan Castillo, Marc</td><td rowspan="2">Grup 14</td></tr>
+<tr><td>7581</td><td>Putellas Martín, Pol</td><td rowspan="2">Grup 15</td><td rowspan="2">2</td><td rowspan="2">putellas-vazquez</td><td rowspan="2">putellasvazquez</td><td rowspan="2">putellasvazquez123</td></tr>
+<tr><td>7632</td><td>Vázquez Pelàez, Alex</td><td rowspan="2">Grup 15</td></tr>
 </table>
-
-
-
-|7674|Boada Cirera, Jan|Grup 02|2|boada-cot|boadacot|boadacot123|
-|7596|Cot Fontanella, Marc|Grup 02|2|boada-cot|boadacot|boadacot123|
-|7582|Bollero Ruzafa, Ivan|Grup 03|2|bollero-pan|bolleropan|bolleropan123|
-|7683|Pan , Jiahao|Grup 03|2|bollero-pan|bolleropan|bolleropan123|
-|7572|Capel Vallbona, Marc|Grup 04|2|capel-codina|capelcodina|capelcodina123|
-|7604|Codina Garcia, Aleix|Grup 04|2|capel-codina|capelcodina|capelcodina123|
-|2708|Casas Lopez, Raul|Grup 05|2|casas-sardana|casassardana|casassardana123|
-|7653|Sardaña Trinh, Marc|Grup 05|2|casas-sardana|casassardana|casassardana123|
-|7579|Córdoba Xandri, Oriol|Grup 06|2|cordoba-puriy|cordobapuriy|cordobapuriy123|
-|7659|Puriy Puriy, Nicolas|Grup 06|2|cordoba-puriy|cordobapuriy|cordobapuriy123|
-|7636|Deus Jurado, Izan|Grup 07|2|deus-ortiz|deusortiz|deusortiz123|
-|7576|Ortiz Guerrero, Antoni|Grup 07|2|deus-ortiz|deusortiz|deusortiz123|
-|7627|Gálvez Comajuan, Marc|Grup 08|2|galvez-sohl|galvezsohl|galvezsohl123|
-|7710|Sohl Brenes, Martin Albert|Grup 08|2|galvez-sohl|galvezsohl|galvezsohl123|
-|7598|Garcia Fernández, Adrià|Grup 09|2|garcia-morales|garciamorales|garciamorales123|
-|7473|Morales Gonzalez, Jan|Grup 09|2|garcia-morales|garciamorales|garciamorales123|
-|7673|Garcia Romero, Arnau|Grup 10|2|garcia-royuela|garciaroyuela|garciaroyuela123|
-|7799|Royuela Martín, Oriol|Grup 10|2|garcia-royuela|garciaroyuela|garciaroyuela123|
-|7500|Lamela Garcia, Alvaro Haoan|Grup 11|2|lamela-soler|lamelasoler|lamelasoler123|
-|7614|Soler Sampere, Arnau|Grup 11|2|lamela-soler|lamelasoler|lamelasoler123|
-|7532|Martinez Segú, Eric|Grup 12|2|martinez-moreno|martinezmoreno|martinezmoreno123|
-|7684|Moreno Fernández, Nil|Grup 12|2|martinez-moreno|martinezmoreno|martinezmoreno123|
-|7260|Navarro Galan, Gerard|Grup 13|3|navarro-rueda-selles|navarroruedaselles|navarroruedaselles123|
-|7668|Rueda Guàrdia, Marc|Grup 13|3|navarro-rueda-selles|navarroruedaselles|navarroruedaselles123|
-|7459|Sellés Puyol, Aniol|Grup 13|3|navarro-rueda-selles|navarroruedaselles|navarroruedaselles123|
-|7672|Pan , Le|Grup 14|2|pan-sacristan|pansacristan|pansacristan123|
-|7836|Sacristan Castillo, Marc|Grup 14|2|pan-sacristan|pansacristan|pansacristan123|
-|7581|Putellas Martín, Pol|Grup 15|2|putellas-vazquez|putellasvazquez|putellasvazquez123|
-|7632|Vázquez Pelàez, Alex|Grup 15|2|putellas-vazquez|putellasvazquez|putellasvazquez123|
-
 ## Pas 1: Comprovació de que tenim descarregades les imatges.
 
 * Comanda a executar:
