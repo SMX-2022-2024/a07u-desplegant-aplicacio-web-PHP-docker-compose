@@ -6,12 +6,12 @@ Els grups han quedat de la següent manera:
     <th rowspan="3">Id</th>
     <th rowspan="3">Alumne/a</th>
     <th rowspan="3">Grup</th>
-    <th colspan="3">De la base de dades</th>
+    <th colspan="3">Informació de la<br>base de dades</th>
   </tr>
   <tr>
-    <th rowspan="2">Nom</th>
-    <th rowspan="2">Usuari</th>
-    <th rowspan="2">contrasenya</th>
+    <th rowspan="2">Nom de la<br>base de dades</th>
+    <th rowspan="2">Usuari de connexió<br>a la base de dades</th>
+    <th rowspan="2">Contrasenya<br>de l'uUsuari de connexió</th>
   </tr>
   <tr></tr>
   <tr>
@@ -253,9 +253,56 @@ volumes:
     mysql-data:
 ```
 
-## Pas 9: Executar una comanda al contenidor de base de dades
+## Pas 9: Arrencar el nostre sistema de contenidors
 
-Primer cal coneixer quin és el nom del contenidor de base de dades.
+* Comanda a executar:
+```bash
+cd ~/<CognomAlumne1>-<CognomAlumne2>/
+sudo docker compose up -d
+```
+
+* **Sortida**:
+
+<pre>
+joan@ubuntudocker2:~/nieto-pardo$ sudo docker compose up -d
+[+] Building 0.2s (14/14) FINISHED                                     docker:default
+ => [nginx internal] load build definition from Dockerfile                       0.0s
+ => => transferring dockerfile: 99B                                              0.0s
+ => [nginx internal] load .dockerignore                                          0.0s
+ => => transferring context: 2B                                                  0.0s
+ => [php internal] load build definition from Dockerfile                         0.0s
+ => => transferring dockerfile: 135B                                             0.0s
+ => [php internal] load .dockerignore                                            0.0s
+ => => transferring context: 2B                                                  0.0s
+ => [nginx internal] load metadata for docker.io/library/nginx:latest            0.0s
+ => [php internal] load metadata for docker.io/library/php:7.0-fpm               0.0s
+ => [nginx internal] load build context                                          0.0s
+ => => transferring context: 972B                                                0.0s
+ => [nginx 1/2] FROM docker.io/library/nginx                                     0.1s
+ => [php 1/3] FROM docker.io/library/php:7.0-fpm                                 0.0s
+ => CACHED [php 2/3] RUN docker-php-ext-install mysqli pdo pdo_mysql             0.0s
+ => CACHED [php 3/3] RUN docker-php-ext-enable mysqli                            0.0s
+ => [php] exporting to image                                                     0.0s
+ => => exporting layers                                                          0.0s
+ => => writing image sha256:e7545954a71357238a8d8fef56bdeaf5ccf1aad8cb028d9e067  0.0s
+ => => naming to docker.io/library/nieto-pardo-php                               0.0s
+ => [nginx 2/2] COPY ./default.conf /etc/nginx/conf.d/default.conf               0.0s
+ => [nginx] exporting to image                                                   0.0s
+ => => exporting layers                                                          0.0s
+ => => writing image sha256:61abb3aef46f2dc9097f3c7bf846a6a2a77366ea0768ea404b0  0.0s
+ => => naming to docker.io/library/nieto-pardo-nginx                             0.0s
+[+] Running 4/4
+ ✔ Network nieto-pardo_default    Created                                        0.1s 
+ ✔ Container nieto-pardo-db-1     Started                                        0.0s 
+ ✔ Container nieto-pardo-nginx-1  Started                                        0.0s 
+ ✔ Container nieto-pardo-php-1    Started                                        0.0s 
+joan@ubuntudocker2:~/nieto-pardo$ 
+</pre>
+
+
+## Pas 10: Executar una comanda al contenidor de base de dades
+
+Primer cal coneixer quin és el **nom del contenidor de base de dades**.
 
 * Comanda a executar:
 ```bash
@@ -266,18 +313,28 @@ sudo docker container list -a | grep db-1
 
 <pre>
 joan@ubuntudocker2:~/nieto-pardo$ sudo docker container list -a | grep db-1
-12102f51fbf1   mariadb  "docker-entrypoint.s…"   18 seconds ago   Up 16 seconds   3306/tcp  nieto-pardo-db-1
-joan@ubuntudocker2:~/nieto-pardo$
+fa875dd53f85   mariadb             "docker-entrypoint.s…"   33 seconds ago   Up 32 seconds   3306/tcp                            nieto-pardo-db-1
+joan@ubuntudocker2:~/nieto-pardo$ 
 </pre>
 
 En el nostre cas el nom del contenidor és **```nieto-pardo-db-1```**.
 
-Per tant, per executar una comanda dins del contenidor de base de dades, cal executar la següent comanda:
+Ara que ja tenim el nom del contenidor al qua ens volem connectar, cal executar la següent comanda:
 
 ```bash
-sudo docker exec -ti nieto-pardo-db-1 bash
+sudo docker exec -ti <CognomAlumne1>-<CognomAlumne2>-db-1 bash
 ```
 
+* **Sortida**:
+
+<pre>
+joan@ubuntudocker2:~/nieto-pardo$ sudo docker exec -ti nieto-pardo-db-1 bash
+root@fa875dd53f85:/# 
+</pre>
+
+Veiem que estem connectats amb l'usuari **```root```** al contenidor amb el nom **```fa875dd53f85```**. Aquest nom del servidor és el nom del identificador del contenidor.
+
+Un cop que ja estem dins de 
 
 ```sql
 CREATE USER 'nietopardo'@'%' IDENTIFIED BY "nietopardo123";
