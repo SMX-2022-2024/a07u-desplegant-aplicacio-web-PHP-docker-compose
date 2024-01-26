@@ -1,15 +1,6 @@
 # a07u - Desplegant una aplicació web PHP amb Docker Compose, Nginx i MariaDB
 
 Els grups han quedat de la següent manera:
-
-|A |B
-|--|--
-|1<td rowspan="2">3</td>|2
-|4|5
-|6|7 
-
-|Id|Alumne/a|Grup|Membres|Nom Base de dades|usuari|contrasenya
-|:---|---|:---|:---:|:---|:---|:---
 <table>
 <tr>
 <td>Id</td><td>Alumne/a</td><td>Grup</td><td>Membres</td><td>Nom Base de dades</td><td>usuari</td><td>contrasenya</td></tr>
@@ -18,7 +9,7 @@ Els grups han quedat de la següent manera:
 <tr><td>7674</td><td>Boada Cirera, Jan</td><td rowspan="2">Grup 02</td><td rowspan="2">2</td><td rowspan="2">boada-cot</td><td rowspan="2">boadacot</td><td rowspan="2">boadacot123</td></tr>
 <tr><td>7596</td><td>Cot Fontanella, Marc</td></tr>
 <tr><td>7582</td><td>Bollero Ruzafa, Ivan</td><td rowspan="2">Grup 03</td><td rowspan="2">2</td><td rowspan="2">bollero-pan</td><td rowspan="2">bolleropan</td><td rowspan="2">bolleropan123</td></tr>
-<tr><td>7683</td><td>Pan , Jiahao</td><td rowspan="2">Grup 03</td><td rowspan="2">2</td><td rowspan="2">bollero-pan</td><td rowspan="2">bolleropan</td><td rowspan="2">bolleropan123</td></tr>
+<tr><td>7683</td><td>Pan , Jiahao</td></tr>
 <tr><td>7572</td><td>Capel Vallbona, Marc</td><td rowspan="2">Grup 04</td><td rowspan="2">2</td><td rowspan="2">capel-codina</td><td rowspan="2">capelcodina</td><td rowspan="2">capelcodina123</td></tr>
 <tr><td>7604</td><td>Codina Garcia, Aleix</td><td rowspan="2">Grup 04</td></tr>
 <tr><td>2708</td><td>Casas Lopez, Raul</td><td rowspan="2">Grup 05</td><td rowspan="2">2</td><td rowspan="2">casas-sardana</td><td rowspan="2">casassardana</td><td rowspan="2">casassardana123</td></tr>
@@ -30,21 +21,22 @@ Els grups han quedat de la següent manera:
 <tr><td>7627</td><td>Gálvez Comajuan, Marc</td><td rowspan="2">Grup 08</td><td rowspan="2">2</td><td rowspan="2">galvez-sohl</td><td rowspan="2">galvezsohl</td><td rowspan="2">galvezsohl123</td></tr>
 <tr><td>7710</td><td>Sohl Brenes, Martin Albert</td></tr>
 <tr><td>7598</td><td>Garcia Fernández, Adrià</td><td rowspan="2">Grup 09</td><td rowspan="2">2</td><td rowspan="2">garcia-morales</td><td rowspan="2">garciamorales</td><td rowspan="2">garciamorales123</td></tr>
-<tr><td>7473</td><td>Morales Gonzalez, Jan</td><td rowspan="2">Grup 09</td></tr>
+<tr><td>7473</td><td>Morales Gonzalez, Jan</td></tr>
 <tr><td>7673</td><td>Garcia Romero, Arnau</td><td rowspan="2">Grup 10</td><td rowspan="2">2</td><td rowspan="2">garcia-royuela</td><td rowspan="2">garciaroyuela</td><td rowspan="2">garciaroyuela123</td></tr>
-<tr><td>7799</td><td>Royuela Martín, Oriol</td><td rowspan="2">Grup 10</td></tr>
+<tr><td>7799</td><td>Royuela Martín, Oriol</td></tr>
 <tr><td>7500</td><td>Lamela Garcia, Alvaro Haoan</td><td rowspan="2">Grup 11</td><td rowspan="2">2</td><td rowspan="2">lamela-soler</td><td rowspan="2">lamelasoler</td><td rowspan="2">lamelasoler123</td></tr>
-<tr><td>7614</td><td>Soler Sampere, Arnau</td><td rowspan="2">Grup 11</td></tr>
+<tr><td>7614</td><td>Soler Sampere, Arnau</td></tr>
 <tr><td>7532</td><td>Martinez Segú, Eric</td><td rowspan="2">Grup 12</td><td rowspan="2">2</td><td rowspan="2">martinez-moreno</td><td rowspan="2">martinezmoreno</td><td rowspan="2">martinezmoreno123</td></tr>
-<tr><td>7684</td><td>Moreno Fernández, Nil</td><td rowspan="2">Grup 12</td></tr>
-<tr><td>7260</td><td>Navarro Galan, Gerard</td><td rowspan="2">Grup 13</td><td rowspan="2">3</td><td rowspan="2">navarro-rueda-selles</td><td rowspan="2">navarroruedaselles</td><td rowspan="2">navarroruedaselles123</td></tr>
-<tr><td>7668</td><td>Rueda Guàrdia, Marc</td><td rowspan="2">Grup 13</td></tr>
-<tr><td>7459</td><td>Sellés Puyol, Aniol</td><td rowspan="2">Grup 13</td></tr>
+<tr><td>7684</td><td>Moreno Fernández, Nil</td></tr>
+<tr><td>7260</td><td>Navarro Galan, Gerard</td><td rowspan="3">Grup 13</td><td rowspan="3">3</td><td rowspan="3">navarro-rueda-selles</td><td rowspan="3">navarroruedaselles</td><td rowspan="3">navarroruedaselles123</td></tr>
+<tr><td>7668</td><td>Rueda Guàrdia, Marc</td></tr>
+<tr><td>7459</td><td>Sellés Puyol, Aniol</td></tr>
 <tr><td>7672</td><td>Pan , Le</td><td rowspan="2">Grup 14</td><td rowspan="2">2</td><td rowspan="2">pan-sacristan</td><td rowspan="2">pansacristan</td><td rowspan="2">pansacristan123</td></tr>
-<tr><td>7836</td><td>Sacristan Castillo, Marc</td><td rowspan="2">Grup 14</td></tr>
+<tr><td>7836</td><td>Sacristan Castillo, Marc</td></tr>
 <tr><td>7581</td><td>Putellas Martín, Pol</td><td rowspan="2">Grup 15</td><td rowspan="2">2</td><td rowspan="2">putellas-vazquez</td><td rowspan="2">putellasvazquez</td><td rowspan="2">putellasvazquez123</td></tr>
-<tr><td>7632</td><td>Vázquez Pelàez, Alex</td><td rowspan="2">Grup 15</td></tr>
+<tr><td>7632</td><td>Vázquez Pelàez, Alex</td></tr>
 </table>
+
 ## Pas 1: Comprovació de que tenim descarregades les imatges.
 
 * Comanda a executar:
