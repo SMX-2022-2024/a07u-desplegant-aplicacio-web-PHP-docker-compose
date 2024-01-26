@@ -3,7 +3,7 @@
 Els grups han quedat de la següent manera:
 <table>
   <tr>
-    <td>Id</td><td>Alumne/a</td><td>Grup</td><td>Membres</td><td>Nom Base de dades</td><td>usuari</td><td>contrasenya</td>
+    <td>Id</td><td>Alumne/a</td><td>Grup</td><td>#<br>alumnes</td><td>Nom de la<br>Base de dades</td><td>Usuari de la<br>Base de dades</td><td>contrasenya</td>
   </tr>
   <tr>
     <td>7312</td><td>Agustí Corbella, Oriol</td><td rowspan="2">Grup&nbsp;01</td><td rowspan="2">2</td><td rowspan="2">agusti-roman</td><td rowspan="2">agustiroman</td><td rowspan="2">agustiroman123</td>
