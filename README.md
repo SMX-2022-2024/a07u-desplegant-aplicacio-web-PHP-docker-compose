@@ -12,7 +12,10 @@ Els grups han quedat de la següent manera:
       <col width="20"></col>
     </colgroup>
   <tr>
-    <th>Id</th><th>Alumne/a</th><th>Grup</th><th>quantitat<br>alumnes</th><th>Nom de la<br>Base de dades</th><th>Usuari de la<br>Base de dades</th><th>contrasenya</th>
+    <th rowspan="2">Id</th><th rowspan="2">Alumne/a</th><th rowspan="2">Grup</th><th rowspan="2">quantitat<br>alumnes</th><th colspan="3">De la base de dades</th></tr>
+  </tr>
+  <tr>
+    <th>Nom</th><th>Usuari</th><th>contrasenya</th>
   </tr>
   <tr>
     <td>7312</td><td>Agustí Corbella, Oriol</td><td rowspan="2">Grup&nbsp;01</td><td rowspan="2">2</td><td rowspan="2">agusti-roman</td><td rowspan="2">agustiroman</td><td rowspan="2">agustiroman123</td>
