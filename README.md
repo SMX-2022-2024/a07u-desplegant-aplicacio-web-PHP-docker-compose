@@ -141,7 +141,7 @@ sudo vi ~/<CognomAlumne1>-<CognomAlumne2>/webSrv/default.conf
 * Segons l'exemple:
 
 <pre>
-sudo vi ~/nieto-pardo/webSrv/Dockerfile
+sudo vi ~/nieto-pardo/webSrv/default.conf
 </pre>
 
 I el contingut del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/webSrv/default.conf```** és el següent:
