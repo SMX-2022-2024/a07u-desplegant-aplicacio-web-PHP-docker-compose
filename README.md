@@ -4,12 +4,12 @@ Els grups han quedat de la següent manera:
 <table>
     <colgroup>
       <col width="20"></col>
-      <col width="100"></col>
+      <col width="10"></col>
       <col width="50"></col>
       <col width="20"></col>
-      <col width="200"></col>
-      <col width="200"></col>
-      <col width="200"></col>
+      <col width="20"></col>
+      <col width="20"></col>
+      <col width="20"></col>
     </colgroup>
   <tr>
     <th>Id</th><th>Alumne/a</th><th>Grup</th><th>quantitat<br>alumnes</th><th>Nom de la<br>Base de dades</th><th>Usuari de la<br>Base de dades</th><th>contrasenya</th>
