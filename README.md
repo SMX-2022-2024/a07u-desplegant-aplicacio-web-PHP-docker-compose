@@ -11,7 +11,7 @@ Els grups han quedat de la següent manera:
 <tr><td>7582</td><td>Bollero Ruzafa, Ivan</td><td rowspan="2">Grup 03</td><td rowspan="2">2</td><td rowspan="2">bollero-pan</td><td rowspan="2">bolleropan</td><td rowspan="2">bolleropan123</td></tr>
 <tr><td>7683</td><td>Pan , Jiahao</td></tr>
 <tr><td>7572</td><td>Capel Vallbona, Marc</td><td rowspan="2">Grup 04</td><td rowspan="2">2</td><td rowspan="2">capel-codina</td><td rowspan="2">capelcodina</td><td rowspan="2">capelcodina123</td></tr>
-<tr><td>7604</td><td>Codina Garcia, Aleix</td><td rowspan="2">Grup 04</td></tr>
+<tr><td>7604</td><td>Codina Garcia, Aleix</td></tr>
 <tr><td>2708</td><td>Casas Lopez, Raul</td><td rowspan="2">Grup 05</td><td rowspan="2">2</td><td rowspan="2">casas-sardana</td><td rowspan="2">casassardana</td><td rowspan="2">casassardana123</td></tr>
 <tr><td>7653</td><td>Sardaña Trinh, Marc</td></tr>
 <tr><td>7579</td><td>Córdoba Xandri, Oriol</td><td rowspan="2">Grup 06</td><td rowspan="2">2</td><td rowspan="2">cordoba-puriy</td><td rowspan="2">cordobapuriy</td><td rowspan="2">cordobapuriy123</td></tr>
