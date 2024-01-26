@@ -15,101 +15,40 @@ Els grups han quedat de la següent manera:
   </tr>
   <tr></tr>
   <tr>
-    <td>7312</td><td>Agustí Corbella, Oriol</td>
-  <tr><td rowspan="3">Grup&nbsp;01</td>
-  <tr><td rowspan="3">agusti-roman</td>
-  <tr><td rowspan="3">agustiroman</td>
-  <tr><td rowspan="3">agustiroman123</td>
+    <td>7312</td><td>Agustí Corbella, Oriol</td><td rowspan="3">Grup&nbsp;01</td><td rowspan="3">agusti-roman</td><td rowspan="3">agustiroman</td><td rowspan="3">agustiroman123</td>
   </tr>
   <tr>
   <td>7422</td><td>Román Robles, Àlex</td>
 </tr>
-  <tr><td>7674</td><td>Boada Cirera, Jan</td>
-  <tr><td rowspan="3">Grup&nbsp;02</td>
-  <tr><td rowspan="3">boada-cot</td>
-  <tr><td rowspan="3">boadacot</td>
-  <tr><td rowspan="3">boadacot123</td></tr>
+  <tr><td>7674</td><td>Boada Cirera, Jan</td><td rowspan="3">Grup&nbsp;02</td><td rowspan="3">boada-cot</td><td rowspan="3">boadacot</td><td rowspan="3">boadacot123</td></tr>
   <tr><td>7596</td><td>Cot Fontanella, Marc</td>
-  <tr><td>
+  <tr><td></td><td>
 </tr>
-<tr>
-  <td>7582</td><td>Bollero Ruzafa, Ivan</td>
-  <tr><td rowspan="3">Grup&nbsp;03</td>
-  <tr><td rowspan="3">bollero-pan</td>
-  <tr><td rowspan="3">bolleropan</td>
-  <tr><td rowspan="3">bolleropan123</td></tr>
+<tr><td>7582</td><td>Bollero Ruzafa, Ivan</td><td rowspan="3">Grup&nbsp;03</td><td rowspan="3">bollero-pan</td><td rowspan="3">bolleropan</td><td rowspan="3">bolleropan123</td></tr>
 <tr><td>7683</td><td>Pan , Jiahao</td></tr>
-<tr><td>7572</td><td>Capel Vallbona, Marc</td>
-  <tr><td rowspan="3">Grup&nbsp;04</td>
-  <tr><td rowspan="3">capel-codina</td>
-  <tr><td rowspan="3">capelcodina</td>
-  <tr><td rowspan="3">capelcodina123</td></tr>
+<tr><td>7572</td><td>Capel Vallbona, Marc</td><td rowspan="3">Grup&nbsp;04</td><td rowspan="3">capel-codina</td><td rowspan="3">capelcodina</td><td rowspan="3">capelcodina123</td></tr>
 <tr><td>7604</td><td>Codina Garcia, Aleix</td></tr>
-<tr><td>2708</td><td>Casas Lopez, Raul</td>
-  <tr><td rowspan="3">Grup&nbsp;05</td>
-  <tr><td rowspan="3">casas-sardana</td>
-  <tr><td rowspan="3">casassardana</td>
-  <tr><td rowspan="3">casassardana123</td></tr>
+<tr><td>2708</td><td>Casas Lopez, Raul</td><td rowspan="3">Grup&nbsp;05</td><td rowspan="3">casas-sardana</td><td rowspan="3">casassardana</td><td rowspan="3">casassardana123</td></tr>
 <tr><td>7653</td><td>Sardaña Trinh, Marc</td></tr>
-<tr><td>7579</td><td>Córdoba Xandri, Oriol</td>
-  <tr><td rowspan="3">Grup&nbsp;06</td>
-  <tr><td rowspan="3">cordoba-puriy</td>
-  <tr><td rowspan="3">cordobapuriy</td>
-  <tr><td rowspan="3">cordobapuriy123</td></tr>
+<tr><td>7579</td><td>Córdoba Xandri, Oriol</td><td rowspan="3">Grup&nbsp;06</td><td rowspan="3">cordoba-puriy</td><td rowspan="3">cordobapuriy</td><td rowspan="3">cordobapuriy123</td></tr>
 <tr><td>7659</td><td>Puriy Puriy, Nicolas</td></tr>
-<tr><td>7636</td><td>Deus Jurado, Izan</td>
-  <tr><td rowspan="3">Grup&nbsp;07</td>
-  <tr><td rowspan="3">deus-ortiz</td>
-  <tr><td rowspan="3">deusortiz</td>
-  <tr><td rowspan="3">deusortiz123</td></tr>
+<tr><td>7636</td><td>Deus Jurado, Izan</td><td rowspan="3">Grup&nbsp;07</td><td rowspan="3">deus-ortiz</td><td rowspan="3">deusortiz</td><td rowspan="3">deusortiz123</td></tr>
 <tr><td>7576</td><td>Ortiz Guerrero, Antoni</td></tr>
-<tr><td>7627</td><td>Gálvez Comajuan, Marc</td>
-  <tr><td rowspan="3">Grup&nbsp;08</td>
-  <tr><td rowspan="3">galvez-sohl</td>
-  <tr><td rowspan="3">galvezsohl</td>
-  <tr><td rowspan="3">galvezsohl123</td></tr>
+<tr><td>7627</td><td>Gálvez Comajuan, Marc</td><td rowspan="3">Grup&nbsp;08</td><td rowspan="3">galvez-sohl</td><td rowspan="3">galvezsohl</td><td rowspan="3">galvezsohl123</td></tr>
 <tr><td>7710</td><td>Sohl Brenes, Martin Albert</td></tr>
-<tr><td>7598</td><td>Garcia Fernández, Adrià</td>
-  <tr><td rowspan="3">Grup&nbsp;09</td>
-  <tr><td rowspan="3">garcia-morales</td>
-  <tr><td rowspan="3">garciamorales</td>
-  <tr><td rowspan="3">garciamorales123</td></tr>
+<tr><td>7598</td><td>Garcia Fernández, Adrià</td><td rowspan="3">Grup&nbsp;09</td><td rowspan="3">garcia-morales</td><td rowspan="3">garciamorales</td><td rowspan="3">garciamorales123</td></tr>
 <tr><td>7473</td><td>Morales Gonzalez, Jan</td></tr>
-<tr><td>7673</td><td>Garcia Romero, Arnau</td>
-  <tr><td rowspan="3">Grup&nbsp;10</td>
-  <tr><td rowspan="3">garcia-royuela</td>
-  <tr><td rowspan="3">garciaroyuela</td>
-  <tr><td rowspan="3">garciaroyuela123</td></tr>
+<tr><td>7673</td><td>Garcia Romero, Arnau</td><td rowspan="3">Grup&nbsp;10</td><td rowspan="3">garcia-royuela</td><td rowspan="3">garciaroyuela</td><td rowspan="3">garciaroyuela123</td></tr>
 <tr><td>7799</td><td>Royuela Martín, Oriol</td></tr>
-<tr><td>7500</td><td>Lamela Garcia, Alvaro Haoan</td>
-  <tr><td rowspan="3">Grup&nbsp;11</td>
-  <tr><td rowspan="3">lamela-soler</td>
-  <tr><td rowspan="3">lamelasoler</td>
-  <tr><td rowspan="3">lamelasoler123</td></tr>
+<tr><td>7500</td><td>Lamela Garcia, Alvaro Haoan</td><td rowspan="3">Grup&nbsp;11</td><td rowspan="3">lamela-soler</td><td rowspan="3">lamelasoler</td><td rowspan="3">lamelasoler123</td></tr>
 <tr><td>7614</td><td>Soler Sampere, Arnau</td></tr>
-<tr><td>7532</td><td>Martinez Segú, Eric</td>
-  <tr><td rowspan="3">Grup&nbsp;12</td>
-  <tr><td rowspan="3">martinez-moreno</td>
-  <tr><td rowspan="3">martinezmoreno</td>
-  <tr><td rowspan="3">martinezmoreno123</td></tr>
+<tr><td>7532</td><td>Martinez Segú, Eric</td><td rowspan="3">Grup&nbsp;12</td><td rowspan="3">martinez-moreno</td><td rowspan="3">martinezmoreno</td><td rowspan="3">martinezmoreno123</td></tr>
 <tr><td>7684</td><td>Moreno Fernández, Nil</td></tr>
-<tr><td>7672</td><td>Pan , Le</td>
-  <tr><td rowspan="3">Grup&nbsp;13</td>
-  <tr><td rowspan="3">pan-sacristan</td>
-  <tr><td rowspan="3">pansacristan</td>
-  <tr><td rowspan="3">pansacristan123</td></tr>
+<tr><td>7672</td><td>Pan , Le</td><td rowspan="3">Grup&nbsp;13</td><td rowspan="3">pan-sacristan</td><td rowspan="3">pansacristan</td><td rowspan="3">pansacristan123</td></tr>
 <tr><td>7836</td><td>Sacristan Castillo, Marc</td></tr>
-<tr><td>7581</td><td>Putellas Martín, Pol</td>
-  <tr><td rowspan="3">Grup&nbsp;14</td>
-  <tr><td rowspan="3">putellas-vazquez</td>
-  <tr><td rowspan="3">putellasvazquez</td>
-  <tr><td rowspan="3">putellasvazquez123</td></tr>
+<tr><td>7581</td><td>Putellas Martín, Pol</td><td rowspan="3">Grup&nbsp;14</td><td rowspan="3">putellas-vazquez</td><td rowspan="3">putellasvazquez</td><td rowspan="3">putellasvazquez123</td></tr>
 <tr><td>7632</td><td>Vázquez Pelàez, Alex</td></tr>
-<tr><td>7260</td><td>Navarro Galan, Gerard</td>
-  <tr><td rowspan="3">Grup&nbsp;15</td>
-  <tr><td rowspan="3">navarro-rueda-selles</td>
-  <tr><td rowspan="3">navarroruedaselles</td>
-  <tr><td rowspan="3">navarroruedaselles123</td></tr>
+<tr><td>7260</td><td>Navarro Galan, Gerard</td><td rowspan="3">Grup&nbsp;15</td><td rowspan="3">navarro-rueda-selles</td><td rowspan="3">navarroruedaselles</td><td rowspan="3">navarroruedaselles123</td></tr>
 <tr><td>7668</td><td>Rueda Guàrdia, Marc</td></tr>
 <tr><td>7459</td><td>Sellés Puyol, Aniol</td></tr>
 </table>
