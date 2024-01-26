@@ -256,7 +256,7 @@ volumes:
     mysql-data:
 ```
 
-> ![WARNING]: NOTA
+> [!WARNING]
 > Si us dona un error, fixeu-vos que a la variable de sistema **```MYSQL_DATABASE```** cal que en comptes de **```<nom de la vostra base de dades>```**, hi poseu en nom de la vostra base de dades, que us he facilitat a la [taula dels grups](#taula-dels-grups) que apareix a l'inici.
 
 
