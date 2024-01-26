@@ -9,6 +9,8 @@ Els grups han quedat de la següent manera:
     <th rowspan="2">Nom</th><th rowspan="2">Usuari</th><th rowspan="2">contrasenya</th>
   </tr>
   <tr>
+  </tr>
+  <tr>
     <td>7312</td><td>Agustí Corbella, Oriol</td><td rowspan="2">Grup&nbsp;01</td><td rowspan="2">agusti-roman</td><td rowspan="2">agustiroman</td><td rowspan="2">agustiroman123</td>
   </tr>
   <tr>
