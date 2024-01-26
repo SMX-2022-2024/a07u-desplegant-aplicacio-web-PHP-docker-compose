@@ -23,7 +23,7 @@ Els grups han quedat de la següent manera:
     <td rowspan="3">agustiroman123</td>
   </tr>
   <tr>
-  <td rowspan="2">7422</td><td rowspan="2">Román Robles, Àlex</td>
+  <td>7422</td><td>Román Robles, Àlex</td>
 </tr>
 <tr><td rowspan="2">7674</td><td rowspan="2">Boada Cirera, Jan</td>
     <td rowspan="3">Grup&nbsp;02</td>
