@@ -609,7 +609,7 @@ sudo vi index.php
 
 Cal que ens desplacem a la línia 177 a on trobarem el següent:
 
-![Alt text](./img/imatge-codi.png)
+![imatge-codi.png](./img/imatge-codi.png)
 
 ```php
 $link = mysqli_connect('db', 'rapidcode', 'rapidcode123', 'ecomdb');
@@ -630,6 +630,8 @@ En el nostre cas quedaria alguna cosa similar a:
 <pre>
 $link = mysqli_connect('db', 'nietopardo', 'nietopardo123', 'nieto-pardo');
 </pre>
+
+![Alt text](./img/imatge-codi-final.png)
 
 ## Pas 12: Final
 
