@@ -509,7 +509,7 @@ CREATE TABLE articles (
   nom_article varchar(50) default NULL,
   preu_article decimal(4,2) default NULL,
   unitats_article smallint default NULL,
-  ImageUrl varchar(255) default NULL,
+  url_imatge varchar(255) default NULL,
   PRIMARY KEY (id_article))
 AUTO_INCREMENT=1; 
 ```
@@ -536,7 +536,7 @@ I per últim passem a afegir diferents registres a la taula **```articles```**.
 Fixeu-vos que dels quatre camps (**```id_article```**, **```nom_article```**, **```preu_article```**, **```unitats_article```**)que hi ha a la taula, només cal omplir-ne 3 (**```nom_article```**, **```preu_article```**, **```unitats_article```**), ja que el primer (**```id_article```**), s'omple automaticament i de manera incremental.
 
 ```sql
-INSERT INTO articles (nom_article,preu_article,unitats_article,imatge_article)
+INSERT INTO articles (nom_article,preu_article,unitats_article,url_imatge)
 VALUES  ("Aigua mineral FONT VELLA, garrafa 6,25 litres",2.29,45,"12917068.jpg"),
         ("Aigua mineral amb gas VICHY CATALAN, pack 6x30 cl",6.55,15,"138297.jpg");
 ```
