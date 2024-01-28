@@ -609,7 +609,7 @@ sudo vi index.php
 
 Cal que ens desplacem a la línia 177 a on trobarem el següent:
 
-![imatge-codi.png](./img/imatge-codi.png)
+![imatge-codi.png](./img/imatge-codi-inicial.png)
 
 ```php
 $link = mysqli_connect('db', 'rapidcode', 'rapidcode123', 'ecomdb');
