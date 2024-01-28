@@ -496,6 +496,76 @@ Database changed
 MariaDB [nieto-pardo]>
 </pre>
 
+### Pas 10.8: Creació de la taula **```articles```** a la base de dades.
+
+Ara cal crear una taula dins de la nostra base de dades.
+
+* **Comanda a executar**:
+
+```sql
+CREATE TABLE products(
+  id mediumint(8) unsigned NOT NULL auto_increment,
+  Name varchar(255) default NULL,
+  Price varchar(255) default NULL,
+  ImageUrl varchar(255) default NULL,
+  PRIMARY KEY (id)
+) AUTO_INCREMENT=1; 
+```
+* **Sortida**:
+
+<pre>
+MariaDB [nieto-pardo]> CREATE TABLE products(
+    ->   id mediumint(8) unsigned NOT NULL auto_increment,
+    ->   Name varchar(255) default NULL,
+    ->   Price varchar(255) default NULL,
+    ->   ImageUrl varchar(255) default NULL,
+    ->   PRIMARY KEY (id)
+    -> ) AUTO_INCREMENT=1;
+Query OK, 0 rows affected (0.011 sec)
+
+MariaDB [nieto-pardo]> 
+</pre>
+
+
+### Pas 10.9: Inserció de registres a la taula **```articles```** de la vostra base de dades.
+
+I per últim passem a afegir diferents registres a la taula **```articles```**.
+
+Fixeu-vos que dels quatre camps (**```id_article```**, **```nom_article```**, **```preu_article```**, **```unitats_article```**)que hi ha a la taula, només cal omplir-ne 3 (**```nom_article```**, **```preu_article```**, **```unitats_article```**), ja que el primer (**```id_article```**), s'omple automaticament i de manera incremental.
+
+```sql
+INSERT INTO products (Name,Price,ImageUrl)
+VALUES ("Laptop","100","c-1.png"),
+       ("Drone","200","c-2.png"),
+       ("VR","300","c-3.png"),
+       ("Tablet","50","c-5.png"),
+       ("Watch","90","c-6.png"),
+       ("Phone Covers","20","c-7.png"),
+       ("Phone","80","c-8.png"),
+       ("Laptop","150","c-4.png");
+```
+
+* **Sortida**:
+
+<pre>
+MariaDB [nieto-pardo]> INSERT INTO products (Name,Price,ImageUrl)
+    -> VALUES ("Laptop","100","c-1.png"),
+    ->        ("Drone","200","c-2.png"),
+    ->        ("VR","300","c-3.png"),
+    ->        ("Tablet","50","c-5.png"),
+    ->        ("Watch","90","c-6.png"),
+    ->        ("Phone Covers","20","c-7.png"),
+    ->        ("Phone","80","c-8.png"),
+    ->        ("Laptop","150","c-4.png");
+Query OK, 8 rows affected (0.004 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+</pre>
+
+Si tot ha anat bé si visiteu l'adreça ip del vostre servidor ubuntu, podreu veure la següent imatge:
+
+![Alt text](image.png)
+
+
 <!-- 
 ### Pas 10.8: Creació de la taula **```articles```** a la base de dades.
 
