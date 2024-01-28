@@ -561,9 +561,81 @@ Query OK, 8 rows affected (0.004 sec)
 Records: 8  Duplicates: 0  Warnings: 0
 </pre>
 
+I sortim del gestor de base de dades.
+
+* **Comanda a executar**:
+
+```sql
+exit
+```
+
+* **Sortida**:
+
+<pre>
+MariaDB [nieto-pardo]> exit
+Bye
+root@d1c17d762b27:/#
+</pre>
+
+I a continuació, sortim del contenidor a on tenim la base de dades.
+
+
+* **Comanda a executar**:
+
+```sql
+exit
+```
+
+* **Sortida**:
+
+<pre>
+root@d1c17d762b27:/# exit
+joan@ubuntudocker2:~/nieto-pardo/phpSrv$
+</pre>
+
+
+## Pas 11: Modificar la connexió de la pàgina php a la base de dades
+
+L'últim pas, i no per això menys important, és modificar la connexió de la web a la base de dades.
+
+Per això cal que relitzam un seguit de modificacions al fitxer **```index.php```**.
+
+* **Comanda a executar**:
+
+```bash
+cd ~/<CognomAlumne1>-<CognomAlumne2>/phpSrv
+sudo vi index.php
+```
+
+Cal que ens desplacem a la línia 177 a on trobarem el següent:
+
+![Alt text](./img/imatge-codi.png)
+
+```php
+$link = mysqli_connect('db', 'rapidcode', 'rapidcode123', 'ecomdb');
+```
+
+I cal que la modifiquem per la següent línia:
+
+```php
+$link = mysqli_connect('db', '<usuari de connexió a la base de dades>', '<contrasenya de l'usuari de connexió>', '<nom de la vostra base de dades>');
+```
+
+Tota aquesta informació la trovareu a la taula que us hem facilitat a la [taula dels grups](#taula-dels-grups) que apareix a l'inici,
+el **```<nom de la vostra base de dades>```** és el de la columna **Nom de la base de dades**, el **```<usuari de connexió a la base de dades>```** és el de la columna **```Usuari de connexió a la base de dades```**, i per últim la **```<contrasenya de l'usuari de connexió>```** és la que apareix a la columna **```Contrasenya de l'usuari de connexió```** de la mateixa taula.
+
+En el nostre cas quedaria alguna cosa similar a:
+* **Sortida**:
+
+<pre>
+$link = mysqli_connect('db', 'nietopardo', 'nietopardo123', 'nieto-pardo');
+</pre>
+
+## Pas 12: Final
+
 Si tot ha anat bé si visiteu l'adreça ip del vostre servidor ubuntu, podreu veure la següent imatge:
 
-![Alt text](image.png)
+![Alt text](./img/imatge-final.png)
 
 
 <!-- 
