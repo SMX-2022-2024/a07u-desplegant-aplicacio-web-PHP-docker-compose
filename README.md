@@ -14,7 +14,7 @@ Els grups han quedat de la següent manera:
   <tr>
     <th rowspan="2">Nom de la base de dades</th>
     <th rowspan="2">Usuari de connexió a la base de dades</th>
-    <th rowspan="2">Contrasenya de l'uUsuari de connexió</th>
+    <th rowspan="2">Contrasenya de l'usuari de connexió</th>
   </tr>
   <tr></tr>
   <tr>
@@ -57,7 +57,7 @@ Els grups han quedat de la següent manera:
 
 ## Pas 1: Comprovació de que tenim descarregades les imatges.
 
-* Comanda a executar:
+* **Comanda a executar**:
 
 ```bash
 sudo docker image list |grep php
@@ -85,14 +85,15 @@ Com a ***primer*** i ***segon*** alumne s'enten l'ordre que queda una cop que el
 
 Per exemple, en el cas de que els cognoms dels alumnes fossin, **Joan Pardo** i **Iván Nieto**, el nom de la carpeta seria **```nieto-pardo```**, ja que **Nieto** està en primera posició si ordenem els cognoms alfabeticament.
 
-* Comanda a executar:
+* **Comanda a executar**:
 
 ```bash
 sudo mkdir ~/<CognomAlumne1>-<CognomAlumne2>
 cd ~/<CognomAlumne1>-<CognomAlumne2>
 ```
 
-Segons l'exemple:
+* **Sortida**:
+
 <pre>
 sudo mkdir ~/nieto-pardo
 cd ~/nieto-pardo
@@ -100,13 +101,13 @@ cd ~/nieto-pardo
 
 ## Pas 3: Creació de la carpeta per ubicar la configuració i els fitxers pel contenidor ```web``` del nostre sistema de contenidors.
 
-* Comanda a executar:
+* **Comanda a executar**:
 
 ```bash
 sudo mkdir ~/<CognomAlumne1>-<CognomAlumne2>/webSrv
 ```
 
-* Segons l'exemple:
+* **Sortida**:
 
 <pre>
 sudo mkdir ~/nieto-pardo/webSrv
@@ -114,13 +115,13 @@ sudo mkdir ~/nieto-pardo/webSrv
 
 ## Pas 4: Creació del fitxer ```Dockerfile``` per la creació del contenidor ```web``` del nostre sistema de contenidors.
 
-* Comanda a executar:
+* **Comanda a executar**:
 
 ```bash
 sudo vi ~/<CognomAlumne1>-<CognomAlumne2>/webSrv/Dockerfile
 ```
 
-* Segons l'exemple:
+* **Sortida**:
 
 <pre>
 sudo vi ~/nieto-pardo/webSrv/Dockerfile
@@ -135,13 +136,13 @@ COPY ./default.conf /etc/nginx/conf.d/default.conf
 
 ## Pas 5: Creació del fitxer de configuració del fitxer ```default.conf``` per la configuració del contenidor ```web``` del nostre sistema de contenidors.
 
-* Comanda a executar:
+* **Comanda a executar**:
 
 ```bash
 sudo vi ~/<CognomAlumne1>-<CognomAlumne2>/webSrv/default.conf
 ```
 
-* Segons l'exemple:
+* **Sortida**:
 
 <pre>
 sudo vi ~/nieto-pardo/webSrv/default.conf
@@ -192,7 +193,7 @@ server {
 
 ## Pas 6: Descarrega d'una pàgina ja existent, escrita en ```php```, per mostrar informació.
 
-* Comanda a executar:
+* **Comanda a executar**:
 
 ```bash
 sudo git clone https://github.com/rapidcode-technologies-private-limited/php-e-commerce.git ~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/
@@ -200,7 +201,7 @@ sudo git clone https://github.com/rapidcode-technologies-private-limited/php-e-c
 
 ## Pas 7: Creació del fitxer ***```Dockerfile```*** per la configuració del contenidor ```php``` del nostre sistema de contenidors.
 
-* Comanda a executar:
+* **Comanda a executar**:
 
 ```
 sudo vi ~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/Dockerfile
@@ -216,7 +217,7 @@ RUN docker-php-ext-enable mysqli
 
 ## Pas 8: Creació del fitxer ***```docker-compose.yml```*** per la configuració del nostre sistema de contenidors.
 
-* Comanda a executar:
+* **Comanda a executar**:
 
 ```bash
 sudo vi ~/<CognomAlumne1>-<CognomAlumne2>/docker-compose.yml
@@ -257,11 +258,12 @@ volumes:
 ```
 
 > [!WARNING]
-> Si us dona un error, fixeu-vos que a la variable de sistema **```MYSQL_DATABASE```** cal que en comptes de la cadena de lletres **```<nom de la vostra base de dades>```**, hi poseu en nom de la vostra base de dades, que us he facilitat a la [taula dels grups](#taula-dels-grups) que apareix a l'inici.
+> ## Si us dona un error, fixeu-vos que a la variable de sistema **```MYSQL_DATABASE```** cal que en comptes de la cadena de lletres **```<nom de la vostra base de dades>```**, hi poseu en nom de la vostra base de dades, que us hem facilitat a la [taula dels grups](#taula-dels-grups) que apareix a l'inici.
 
 ## Pas 9: Arrencar el nostre sistema de contenidors
 
-* Comanda a executar:
+* **Comanda a executar**:
+
 ```bash
 cd ~/<CognomAlumne1>-<CognomAlumne2>/
 sudo docker compose up -d
@@ -306,11 +308,16 @@ joan@ubuntudocker2:~/nieto-pardo$
 </pre>
 
 
-## Pas 10: Executar una comanda al contenidor de base de dades
+## Pas 10: Configurar el contenidor de base de dades
 
-Primer cal coneixer quin és el **nom del contenidor de base de dades**.
+Per aquest pas cal que fem tot un seguit de passos intermitjos:
 
-* Comanda a executar:
+### Pas 10.1: Obtenir el nom del contenidor de base de dades
+
+Per obtenir quin és el **nom del contenidor de base de dades**, podem llistar tots els contenidors i filtrar per un tros del nom del contenidor.
+
+* **Comanda a executar**:
+
 ```bash
 sudo docker container list -a | grep db-1
 ```
@@ -324,6 +331,8 @@ joan@ubuntudocker2:~/nieto-pardo$
 </pre>
 
 En el nostre cas el nom del contenidor és **```nieto-pardo-db-1```**.
+
+### Pas 10.2: Connectar-nos al contenidor de base de dades
 
 Ara que ja tenim el nom del contenidor al qua ens volem connectar, cal executar la següent comanda:
 
@@ -340,24 +349,194 @@ root@fa875dd53f85:/#
 
 Veiem que estem connectats amb l'usuari **```root```** al contenidor amb el nom **```fa875dd53f85```**. Aquest nom del servidor és el nom del identificador del contenidor.
 
-Un cop que ja estem dins de 
+### Pas 10.3: Entrar al gestor de base de dades **```mariadb```**.
+
+Un cop que ja estem dins del servidor accedim al gestor de base de dades **```mariadb```**.
+
+* **Comanda a executar**:
+
+```bash
+mariadb -u root -pmariadb
+```
+
+* **Sortida**:
+
+<pre>
+root@fa875dd53f85:/# mariadb -u root -pmariadb
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 3
+Server version: 11.2.2-MariaDB-1:11.2.2+maria~ubu2204 mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> 
+</pre>
+
+### Pas 10.4: Creació de l'usuari i la contrasenya per connectar-nos a la base de dades.
+
+El nom de l'usuari per connectar-nos a la base de dades, el trovareu a la taula que us hem facilitat a la [taula dels grups](#taula-dels-grups) que apareix a l'inici, és el de la columna **```Usuari de connexió a la base de dades```**, mentre que la contrasenya és la que apareix a la columna **```Contrasenya de l'usuari de connexió```** de la mateixa taula.
+
+* **Comanda a executar**:
 
 ```sql
-CREATE USER 'nietopardo'@'%' IDENTIFIED BY "nietopardo123";
+CREATE USER '<usuari de connexió a la base de dades>'@'%' IDENTIFIED BY "<usuari de connexió a la base de dades>123";
+```
 
-GRANT ALL PRIVILEGES ON *.* TO 'nietopardo'@'%';
+* **Sortida**:
+
+<pre>
+MariaDB [(none)]> CREATE USER 'nietopardo'@'%' IDENTIFIED BY "nietopardo123";
+Query OK, 0 rows affected (0.005 sec)
+
+MariaDB [(none)]> 
+</pre>
+
+Per validar que l'usuari ha estat creat correctament podeu executar la següent comanda:
+
+* **Comanda a executar**:
+
+```sql
+SELECT user FROM mysql.user;
+```
+
+* **Sortida**:
+
+<pre>
+MariaDB [(none)]> SELECT user FROM mysql.user;
++-------------+
+| User        |
++-------------+
+| nietopardo  |
+| root        |
+| healthcheck |
+| healthcheck |
+| healthcheck |
+| mariadb.sys |
+| root        |
++-------------+
+7 rows in set (0.002 sec)
+
+MariaDB [(none)]> 
+</pre>
+
+A la columna **```User```** cal que aparegui el vostre usuari.
+
+### Pas 10.5: Assignació de privilegis a l'usuari per connectar-nos a la base de dades.
+
+* **Comanda a executar**:
+
+```sql
+GRANT ALL PRIVILEGES ON *.* TO '<usuari de connexió a la base de dades>'@'%';
 FLUSH PRIVILEGES;
+```
 
-use nieto-pardo;
+* **Sortida**:
 
+<pre>
+MariaDB [(none)]> GRANT ALL PRIVILEGES ON *.* TO 'nietopardo'@'%';Query OK, 0 rows affected (0.004 sec)
+
+MariaDB [(none)]> FLUSH PRIVILEGES;
+Query OK, 0 rows affected (0.001 sec)
+
+MariaDB [(none)]> 
+</pre>
+
+### Pas 10.6: Confirmació de que la vostra base de dades està creada.
+
+Seguint connectats al contenidor de base de dades i al gestor de bases de dades **```mariadb```**, podem veure quines són les bases de dades que hi ha creades.
+
+* **Comanda a executar**:
+
+```sql
+show databases;
+```
+
+* **Sortida**:
+
+<pre>
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| information_schema |
+| mysql              |
+| nieto-pardo        |
+| performance_schema |
+| sys                |
++--------------------+
+5 rows in set (0.004 sec)
+
+MariaDB [(none)]> 
+</pre>
+
+A la llista de bases de dades, cal que aparegui la vostra base de dades **```<nom de la vostra base de dades>```**.
+
+En el nostre cas la nostra bases de dades és **```nieto-pardo```**.
+
+### Pas 10.7: Passem a gestionar la nostra base de dades.
+
+El següent pas, és indicar al gestor de bases de dades **```mariadb```**, que volem treballar sobre la nostra base de dades.
+
+* **Comanda a executar**:
+
+```sql
+use **```<nom de la vostra base de dades>```**;
+```
+
+* **Sortida**:
+
+<pre>
+MariaDB [(none)]> use nieto-pardo;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+
+Database changed
+MariaDB [nieto-pardo]>
+</pre>
+
+
+### Pas 10.8: Creació de la taula **```articles```** a la base de dades.
+
+Ara cal crear una taula dins de la nostra base de dades.
+
+* **Comanda a executar**:
+
+```sql
 CREATE TABLE articles (
   id_article int(8) unsigned NOT NULL auto_increment,
   nom_article varchar(50) default NULL,
   preu_article decimal(4,2) default NULL,
   unitats_article smallint default NULL,
+  ImageUrl varchar(255) default NULL,
   PRIMARY KEY (id_article))
 AUTO_INCREMENT=1; 
+```
+* **Sortida**:
 
-INSERT INTO articles (nom_article,preu_article,unitats_article)
-VALUES  ("Aigua 5 litres",2.50,100); 
+<pre>
+MariaDB [nieto-pardo]> CREATE TABLE articles (
+    ->   id_article int(8) unsigned NOT NULL auto_increment,
+    ->   nom_article varchar(150) default NULL,
+    ->   preu_article decimal(4,2) default NULL,
+    ->   unitats_article smallint default NULL,
+    ->   PRIMARY KEY (id_article))
+    -> AUTO_INCREMENT=1;
+Query OK, 0 rows affected (0.010 sec)
+
+MariaDB [nieto-pardo]> 
+</pre>
+
+
+### Pas 10.9: Isnerció de registres a la taula **```articles```** de la vostra base de dades.
+
+I per últim passem a afegir diferents registres a la taula **```articles```**.
+
+Fixeu-vos que dels quatre camps (**```id_article```**, **```nom_article```**, **```preu_article```**, **```unitats_article```**)que hi ha a la taula, només cal omplir-ne 3 (**```nom_article```**, **```preu_article```**, **```unitats_article```**), ja que el primer (**```id_article```**), s'omple automaticament i de manera incremental.
+
+```sql
+INSERT INTO articles (nom_article,preu_article,unitats_article,imatge_article)
+VALUES  ("Aigua mineral FONT VELLA, garrafa 6,25 litres",2.29,45,"12917068.jpg"),
+        ("Aigua mineral amb gas VICHY CATALAN, pack 6x30 cl",6.55,15,"138297.jpg");
 ```
