@@ -625,6 +625,7 @@ Tota aquesta informació la trovareu a la taula que us hem facilitat a la [taula
 el **```<nom de la vostra base de dades>```** és el de la columna **Nom de la base de dades**, el **```<usuari de connexió a la base de dades>```** és el de la columna **```Usuari de connexió a la base de dades```**, i per últim la **```<contrasenya de l'usuari de connexió>```** és la que apareix a la columna **```Contrasenya de l'usuari de connexió```** de la mateixa taula.
 
 En el nostre cas quedaria alguna cosa similar a:
+
 * **Sortida**:
 
 <pre>
@@ -672,6 +673,160 @@ o
 
 ![Alt text](./img/imatge-error-1049-db.png)
 
+
+## Pas 13: EXTRA
+
+Hi ha una comanda a **```linux```** que és  **```sed```** (***stream editor*** -> **editor de flux**), es tracta d'un editor de text de línia d'ordres no interactiu.
+
+Per exemple:
+
+Creem un fitxer de text anomenat **```test.txt```** amb el següent contingut:
+
+```bash
+sudo vi ~/test.txt
+```
+
+
+I el contingut del fitxer **```~/test.txt```** és el següent:
+
+ 
+```txt
+La fruita és bona.
+La platja m'agrada.
+```
+
+Confirmem el contigut de **```~/test.txt```**.
+
+```bash
+cat ~/test.txt
+```
+
+* **Sortida**:
+
+<pre>
+joan@ubuntudocker2:~/$ cat ~/test.txt 
+La fruita és bona.
+La platja m'agrada.
+joan@ubuntudocker2:~/$ 
+</pre>
+
+Farem servir la comanda **```sed```** per substituir l'expressió **```fruita```** per **```vida```** de la següent manera:
+
+```bash
+sed -i 's/fruita/vida/g' ~/test.txt
+```
+
+* **Sortida**:
+
+<pre>
+joan@ubuntudocker2:~$ sed -i 's/fruita/vida/g' ~/test.txt
+joan@ubuntudocker2:~$
+</pre>
+
+Tornem a confirmar el contigut de **```~/test.txt```**.
+
+```bash
+cat ~/test.txt
+```
+
+* **Sortida**:
+
+<pre>
+joan@ubuntudocker2:~/$ cat ~/test.txt 
+La vida és bona.
+La platja m'agrada.
+joan@ubuntudocker2:~/$ 
+</pre>
+
+
+L'ajuda de la comanda **```sed```** és la següent:
+
+<pre>
+joan@ubuntudocker2:~/nieto-pardo/phpSrv$ sed --help
+Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
+
+  -n, --quiet, --silent
+                 suppress automatic printing of pattern space
+      --debug
+                 annotate program execution
+  -e script, --expression=script
+                 add the script to the commands to be executed
+  -f script-file, --file=script-file
+                 add the contents of script-file to the commands to be executed
+  --follow-symlinks
+                 follow symlinks when processing in place
+  -i[SUFFIX], --in-place[=SUFFIX]
+                 edit files in place (makes backup if SUFFIX supplied)
+  -l N, --line-length=N
+                 specify the desired line-wrap length for the `l' command
+  --posix
+                 disable all GNU extensions.
+  -E, -r, --regexp-extended
+                 use extended regular expressions in the script
+                 (for portability use POSIX -E).
+  -s, --separate
+                 consider files as separate rather than as a single,
+                 continuous long stream.
+      --sandbox
+                 operate in sandbox mode (disable e/r/w commands).
+  -u, --unbuffered
+                 load minimal amounts of data from the input files and flush
+                 the output buffers more often
+  -z, --null-data
+                 separate lines by NUL characters
+      --help     display this help and exit
+      --version  output version information and exit
+
+If no -e, --expression, -f, or --file option is given, then the first
+non-option argument is taken as the sed script to interpret.  All
+remaining arguments are names of input files; if no input files are
+specified, then the standard input is read.
+
+GNU sed home page: <https://www.gnu.org/software/sed/>.
+General help using GNU software: <https://www.gnu.org/gethelp/>.
+E-mail bug reports to: <bug-sed@gnu.org>.
+joan@ubuntudocker2:~/nieto-pardo/phpSrv$ 
+</pre>
+
+
+Cal que modifqueu del fitxer  la seguent informació:
+
+sudo sed -i 's/Rapidcode E-Commerce/Ginebró comerç electrònic/g' index.php
+
+|Paraula<br>a canviar|Nova<br>paraula|
+|----|----|
+|Laptops|Portàtils|
+|Drones|Drons|
+|Gadgets|Gadgets|
+|Phones|Telèfons|
+|VR|RV|
+|Contact us|Contacta amb nosaltres|
+|Make Your Shopping Easy|La teva compra fàcil|
+|Find everything accordingly|Troba-ho tot!|
+|SHOW NOW!|Compra ara|
+|Product List|Llista de productes|
+|Purchase|Compra|
+|at the lowest price|al preu més econòmic|
+|$<|€<|
+
+
+<!-- sudo sed -i 's/Rapidcode E-Commerce/Ginebró comerç electrònic/g' index.php
+
+sudo sed -i 's/Laptops/Portàtils/g' index.php
+sudo sed -i 's/Drones/Drons/g' index.php
+sudo sed -i 's/Gadgets/Gadgets/g' index.php
+sudo sed -i 's/Phones/Telèfons/g' index.php
+sudo sed -i 's/VR/RV/g' index.php
+sudo sed -i 's/Contact us/Contacta amb nosaltres/g' index.php
+
+sudo sed -i 's/Make Your Shopping Easy/La teva compra fàcil
+sudo sed -i 's/Find everything accordingly/Troba-ho tot!
+sudo sed -i 's/SHOW NOW!/Compra ara
+sudo sed -i 's/Product List/Llista de productes
+sudo sed -i 's/Purchase/Compra
+sudo sed -i 's/at the lowest price/al preu més econòmic/g' index.php
+
+sudo sed -i 's/$</€</g' index.php -->
 
 <!-- 
 ### Pas 10.8: Creació de la taula **```articles```** a la base de dades.
