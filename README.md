@@ -810,6 +810,8 @@ sudo sed -i 's/Rapidcode E-Commerce/Ginebró comerç electrònic/g' index.php
 |$<|€<|
 
 
+![fitxer-php-final](./img/index-php-final.png)
+
 <!-- sudo sed -i 's/Rapidcode E-Commerce/Ginebró comerç electrònic/g' index.php
 
 sudo sed -i 's/Laptops/Portàtils/g' index.php
