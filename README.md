@@ -59,7 +59,7 @@ Els grups han quedat de la següent manera:
 
 * **Comanda a executar**:
 
-```bash
+```txt
 sudo docker image list |grep php
 sudo docker image list |grep nginx
 sudo docker image list |grep mariadb
@@ -67,7 +67,7 @@ sudo docker image list |grep mariadb
 
 > Si no apareixen les imatges, llavors cal que les descarreguem:
 >
-> ```bash
+> ```txt
 > sudo docker pull php:7.0-fpm
 > sudo docker pull nginx
 > sudo docker pull mariadb
@@ -87,7 +87,7 @@ Per exemple, en el cas de que els cognoms dels alumnes fossin, **Joan Pardo** i 
 
 * **Comanda a executar**:
 
-```bash
+```txt
 sudo mkdir ~/<CognomAlumne1>-<CognomAlumne2>
 cd ~/<CognomAlumne1>-<CognomAlumne2>
 ```
@@ -103,7 +103,7 @@ cd ~/nieto-pardo
 
 * **Comanda a executar**:
 
-```bash
+```txt
 sudo mkdir ~/<CognomAlumne1>-<CognomAlumne2>/webSrv
 ```
 
@@ -117,7 +117,7 @@ sudo mkdir ~/nieto-pardo/webSrv
 
 * **Comanda a executar**:
 
-```bash
+```txt
 sudo vi ~/<CognomAlumne1>-<CognomAlumne2>/webSrv/Dockerfile
 ```
 
@@ -138,7 +138,7 @@ COPY ./default.conf /etc/nginx/conf.d/default.conf
 
 * **Comanda a executar**:
 
-```bash
+```txt
 sudo vi ~/<CognomAlumne1>-<CognomAlumne2>/webSrv/default.conf
 ```
 
@@ -195,7 +195,7 @@ server {
 
 * **Comanda a executar**:
 
-```bash
+```txt
 sudo git clone https://github.com/rapidcode-technologies-private-limited/php-e-commerce.git ~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/
 ```
 
@@ -209,7 +209,7 @@ sudo vi ~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/Dockerfile
 
 El contingut del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/Dockerfile```** és el següent:
 
-```bash
+```txt
 FROM php:7.0-fpm
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 RUN docker-php-ext-enable mysqli
@@ -219,7 +219,7 @@ RUN docker-php-ext-enable mysqli
 
 * **Comanda a executar**:
 
-```bash
+```txt
 sudo vi ~/<CognomAlumne1>-<CognomAlumne2>/docker-compose.yml
 ```
 
@@ -264,7 +264,7 @@ volumes:
 
 * **Comanda a executar**:
 
-```bash
+```txt
 cd ~/<CognomAlumne1>-<CognomAlumne2>/
 sudo docker compose up -d
 ```
@@ -318,7 +318,7 @@ Per obtenir quin és el **nom del contenidor de base de dades**, podem llistar t
 
 * **Comanda a executar**:
 
-```bash
+```txt
 sudo docker container list -a | grep db-1
 ```
 
@@ -336,7 +336,7 @@ En el nostre cas el nom del contenidor és **```nieto-pardo-db-1```**.
 
 Ara que ja tenim el nom del contenidor al qua ens volem connectar, cal executar la següent comanda:
 
-```bash
+```txt
 sudo docker exec -ti <CognomAlumne1>-<CognomAlumne2>-db-1 bash
 ```
 
@@ -355,7 +355,7 @@ Un cop que ja estem dins del servidor accedim al gestor de base de dades **```ma
 
 * **Comanda a executar**:
 
-```bash
+```txt
 mariadb -u root -pmariadb
 ```
 
@@ -381,7 +381,7 @@ El nom de l'usuari per connectar-nos a la base de dades, el trovareu a la taula 
 * **Comanda a executar**:
 
 ```sql
-CREATE USER '<usuari de connexió a la base de dades>'@'%' IDENTIFIED BY "<usuari de connexió a la base de dades>123";
+CREATE USER '<usuari de connexió a la base de dades>'@'%' IDENTIFIED BY '<Contrasenya de l'usuari de connexió>';
 ```
 
 * **Sortida**:
@@ -482,7 +482,7 @@ El següent pas, és indicar al gestor de bases de dades **```mariadb```**, que 
 * **Comanda a executar**:
 
 ```sql
-use **```<nom de la vostra base de dades>```**;
+use <nom de la vostra base de dades>;
 ```
 
 * **Sortida**:
@@ -602,7 +602,7 @@ Per això cal que relitzam un seguit de modificacions al fitxer **```index.php``
 
 * **Comanda a executar**:
 
-```bash
+```txt
 cd ~/<CognomAlumne1>-<CognomAlumne2>/phpSrv
 sudo vi index.php
 ```
@@ -682,7 +682,7 @@ Per exemple:
 
 Creem un fitxer de text anomenat **```test.txt```** amb el següent contingut:
 
-```bash
+```txt
 sudo vi ~/test.txt
 ```
 
@@ -695,7 +695,7 @@ La platja m'agrada.
 
 Confirmem el contigut de **```~/test.txt```**.
 
-```bash
+```txt
 cat ~/test.txt
 ```
 
@@ -710,7 +710,7 @@ joan@ubuntudocker2:~/$
 
 Farem servir la comanda **```sed```** per substituir l'expressió **```fruita```** per **```vida```** de la següent manera:
 
-```bash
+```txt
 sed -i 's/fruita/vida/g' ~/test.txt
 ```
 
@@ -723,7 +723,7 @@ joan@ubuntudocker2:~$
 
 Tornem a confirmar el contigut de **```~/test.txt```**.
 
-```bash
+```txt
 cat ~/test.txt
 ```
 
@@ -809,7 +809,11 @@ Cal que modifqueu del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index
 
 ![fitxer-php-final](./img/index-php-final.png)
 
-<!-- sudo sed -i 's/Rapidcode E-Commerce/Ginebró comerç electrònic/g' index.php
+<!--
+
+sudo sed -i 's/Rapidcode E-Commerce/Ginebró comerç electrònic/g' index.php
+sudo sed -i 's/Purchase/Compra\<b\>/g' index.php
+sudo sed -i 's/al preu més econòmic\<\/b\>/<\/b\>al preu més econòmic/g' index.php
 
 sudo sed -i 's/Laptops/Portàtils/g' index.php
 sudo sed -i 's/Drones/Drons/g' index.php
@@ -818,14 +822,22 @@ sudo sed -i 's/Phones/Telèfons/g' index.php
 sudo sed -i 's/VR/RV/g' index.php
 sudo sed -i 's/Contact us/Contacta amb nosaltres/g' index.php
 
-sudo sed -i 's/Make Your Shopping Easy/La teva compra fàcil
-sudo sed -i 's/Find everything accordingly/Troba-ho tot!
-sudo sed -i 's/SHOW NOW!/Compra ara
-sudo sed -i 's/Product List/Llista de productes
-sudo sed -i 's/Purchase/Compra
-sudo sed -i 's/at the lowest price/al preu més econòmic/g' index.php
+sudo sed -i 's/Make Your Shopping Easy/La teva compra fàcil/g' index.php
+sudo sed -i 's/Find everything accordingly/Troba-ho tot!/g' index.php
+sudo sed -i 's/SHOW NOW!/Compra ara/g' index.php
+sudo sed -i 's/Product List/Llista de productes/g' index.php
 
-sudo sed -i 's/$</€</g' index.php -->
+sudo sed -i 's/$</€</g' index.php
+
+-->
+
+<!--
+sudo sed -i 's/Compra/Compra <b>/g' index.php
+sudo sed -i 's/al preu més econòmic/al preu més econòmic\<\/b\>/g' index.php
+
+sudo sed -i 's/al preu més econòmic\<\/b\>/<\/b\>al preu més econòmic/g' index.php
+
+-->
 
 <!-- 
 ### Pas 10.8: Creació de la taula **```articles```** a la base de dades.
