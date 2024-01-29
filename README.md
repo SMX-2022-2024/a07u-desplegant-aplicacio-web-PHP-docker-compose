@@ -607,7 +607,7 @@ cd ~/<CognomAlumne1>-<CognomAlumne2>/phpSrv
 sudo vi index.php
 ```
 
-Cal que ens desplacem a la línia 177 a on trobarem el següent:
+Cal que ens desplacem a la **línia ```177```** a on trobarem el següent:
 
 ![imatge-codi.png](./img/imatge-codi-inicial.png)
 
@@ -635,9 +635,22 @@ $link = mysqli_connect('db', 'nietopardo', 'nietopardo123', 'nieto-pardo');
 
 ## Pas 12: Final
 
-Si tot ha anat bé si visiteu l'adreça ip del vostre servidor ubuntu, podreu veure la següent imatge:
+Si tot ha anat, quan visiteu l'adreça ip del vostre servidor **```ubuntu```**, haureu de veure la següent imatge:
 
 ![Alt text](./img/imatge-final.png)
+
+
+## Troubleshooting
+
+Possibles errors que us podeu trovar:
+
+1. Apareix un error de privlegis, dient que no teniu permis per accedir.
+
+**Motiu**: Alguna de les comandes que heu fet, l'heu fet sense **```sudo```**, o des de una connexió al servidor com a **```root```**, de manera que heu creat carpetes a les quals un usuari anonim no té permisos per accedir. D'aquí que el servidor web indiqui que no tenim permisos per accedir a la web.
+
+1. Apareix un error de connexió a la base de dades.
+
+**Motiu**: No heu modificat la **línia ```177```** del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php```**.
 
 
 <!-- 
