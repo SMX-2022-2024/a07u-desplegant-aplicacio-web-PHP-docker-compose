@@ -381,7 +381,7 @@ El nom de l'usuari per connectar-nos a la base de dades, el trovareu a la taula 
 * **Comanda a executar**:
 
 ```sql
-CREATE USER '<usuari de connexió a la base de dades>'@'%' IDENTIFIED BY '<Contrasenya de l'usuari de connexió>';
+CREATE USER '<usuari de connexió a la base de dades>'@'%' IDENTIFIED BY '<contrasenya de l'usuari de connexió>';
 ```
 
 * **Sortida**:
