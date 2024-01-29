@@ -657,11 +657,22 @@ Els errors poden ser diferents, dependrà de la informació que aparegui a l'err
 
 ![Alt text](./img/imatge-error-1045-db.png)
 
-L'Error MySQL 1045 se sol produir quan intentes accedir a la teva base de dades MySQL. La petició serà denegada si el servidor no creu que estiguis autoritzat a fer l'acció. Per exemple, potser utilitzeu una contrasenya incorrecta o que no tingueu els permisos necessaris.
+L'**```Error MySQL 1045```** se sol produir quan intentes accedir a la teva base de dades **MySQL**. La petició serà denegada si el servidor creu que l'usuari no està autoritzat a fer l'acció. Per exemple, potser utilitzeu una contrasenya incorrecta o que no tingueu els permisos necessaris.
 
 **Motiu**: No heu modificat correctament la **línia ```177```** del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php```**.
 
+### **```Error MySQL 1049```**
+
+
+**Motiu**: No heu modificat correctament la **línia ```177```** del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php```**.
+
+o
+
+**Motiu**: No heu creat correctament la base de dades al fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/docker-compose.yml```**, per tant, la base de dades no existeix o el **nom de la base de dades** que heu definit al fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/docker-compose.yml```** és diferent al que heu escrit a la **línia ```177```** del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php```**..
+
 ![Alt text](./img/imatge-error-1049-db.png)
+
+
 <!-- 
 ### Pas 10.8: Creació de la taula **```articles```** a la base de dades.
 
