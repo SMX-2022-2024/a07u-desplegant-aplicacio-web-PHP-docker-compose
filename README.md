@@ -650,9 +650,18 @@ Possibles errors que us podeu trovar:
 
 1. Apareix un error de connexió a la base de dades.
 
-**Motiu**: No heu modificat la **línia ```177```** del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php```**.
+Els errors poden ser diferents, dependrà de la informació que aparegui a l'error.
 
 
+### **```Error MySQL 1045```**
+
+![Alt text](./img/imatge-error-1045-db.png)
+
+L'Error MySQL 1045 se sol produir quan intentes accedir a la teva base de dades MySQL. La petició serà denegada si el servidor no creu que estiguis autoritzat a fer l'acció. Per exemple, potser utilitzeu una contrasenya incorrecta o que no tingueu els permisos necessaris.
+
+**Motiu**: No heu modificat correctament la **línia ```177```** del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php```**.
+
+![Alt text](./img/imatge-error-1049-db.png)
 <!-- 
 ### Pas 10.8: Creació de la taula **```articles```** a la base de dades.
 
