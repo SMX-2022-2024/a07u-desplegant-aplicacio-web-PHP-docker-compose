@@ -669,12 +669,12 @@ L'**```Error MySQL 1045```** se sol produir quan intentes accedir a la teva base
 
 o
 
-**Motiu**: No heu creat correctament la base de dades al fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/docker-compose.yml```**, per tant, la base de dades no existeix o el **nom de la base de dades** que heu definit al fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/docker-compose.yml```** és diferent al que heu escrit a la **línia ```177```** del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php```**..
+**Motiu**: No heu creat correctament la base de dades al fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/docker-compose.yml```**, per tant, la base de dades no existeix o el **nom de la base de dades** que heu definit al fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/docker-compose.yml```** és diferent al que heu escrit a la **línia ```177```** del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php```**.
 
 ![Alt text](./img/imatge-error-1049-db.png)
 
 
-## Pas 13: EXTRA
+## Pas 13: EXTRA: Traducció de textos de l'anglès al català
 
 Hi ha una comanda a **```linux```** que és  **```sed```** (***stream editor*** -> **editor de flux**), es tracta d'un editor de text de línia d'ordres no interactiu.
 
@@ -686,9 +686,7 @@ Creem un fitxer de text anomenat **```test.txt```** amb el següent contingut:
 sudo vi ~/test.txt
 ```
 
-
 I el contingut del fitxer **```~/test.txt```** és el següent:
-
  
 ```txt
 La fruita és bona.
@@ -789,12 +787,11 @@ joan@ubuntudocker2:~/nieto-pardo/phpSrv$
 </pre>
 
 
-Cal que modifqueu del fitxer  la seguent informació:
-
-sudo sed -i 's/Rapidcode E-Commerce/Ginebró comerç electrònic/g' index.php
+Cal que modifqueu del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php```** la seguent informació:
 
 |Paraula<br>a canviar|Nova<br>paraula|
 |----|----|
+|Rapidcode E-Commerce|Ginebró comerç electrònic|
 |Laptops|Portàtils|
 |Drones|Drons|
 |Gadgets|Gadgets|
