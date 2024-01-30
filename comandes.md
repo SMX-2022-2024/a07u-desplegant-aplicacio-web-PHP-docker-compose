@@ -15,7 +15,7 @@ A continuació es facilita una relació les cadenes de text genèriques i com es
 |**```<CognomAlumne1>-<CognomAlumne2>```**|Nom de la base de dades|**11**|**```bellavista-nieto```**|
 |**```<nom-de-la-vostra-base-de-dades>```**|Nom de la base de dades|**3**|**```bellavista-nieto```**|
 |**```<usuari-de-connexio-a-la-base-de-dades>```**|Usuari de connexió a la base de dades|**3**|**```bellavistanieto```**|
-|**```<contrasenya-de-l-usuari-de-la-connexio>```**|Contrasenya de l'usuari de connexió|**1**|**```bellavistanieto123```**|
+|**```<contrasenya-de-l-usuari-de-la-connexio>```**|Contrasenya de l'usuari de connexió|**2**|**```bellavistanieto123```**|
 
 Un cop fet aquestes substitucions, si ho heu fet bé, tindreu totes les comandes que cal que executeu per fer la vostra activitat.
 
@@ -25,7 +25,7 @@ La comanda que es farà servir és **```sed```** (***stream editor*** -> **edito
 sudo sed -i 's/Cadena a substituir/Informació de la columna/g' comandes-exemple.txt
 ```
 
-Exemple de comandes per fer les substitucions.
+## Exemple de comandes per fer les substitucions.
 
 <details><summary>Pitja per veure el contingut del fitxer comandes-exemple.txt</summary>
 
@@ -208,6 +208,32 @@ $link = mysqli_connect('db', '<usuari-de-connexio-a-la-base-de-dades>', '<contra
 sudo sed -i 's/<CognomAlumne1>-<CognomAlumne2>/bellavista-nieto/g' comandes-exemple.txt
 ```
 
+<br>
+<hr>
+<br>
+
+<details><summary>Pitja per veure la comanda per comptar substitucions.</summary>
+
+> Si voleu saber la quantitat de substitucions que farem podeu executar aquesta comanda:
+> 
+> * **Comanda a executar**:
+> 
+> ```
+> grep -o '<CognomAlumne1>-<CognomAlumne2>' comandes-exemple.txt | wc -l 
+> ```
+> 
+> * **Sortida**:
+> <pre>
+> profe@smx2 $ grep -o '<CognomAlumne1>-<CognomAlumne2>' comandes-exemple.txt | wc -l 
+> 11
+> profe@smx2 $
+> </pre>
+</details>
+
+<br>
+<hr>
+<br>
+
 <details><summary>Pitja per veure el contingut del fitxer comandes-exemple.txt desprès de l'execució de la primera de les comandes.</summary>
 <hr>
 
@@ -374,28 +400,49 @@ $link = mysqli_connect('db', '<usuari-de-connexio-a-la-base-de-dades>', '<contra
 |---|---|---|
 |**```<nom-de-la-vostra-base-de-dades>```**|Nom de la base de dades|**```bellavista-nieto```**|
 |**```<usuari-de-connexio-a-la-base-de-dades>```**|Usuari de connexió a la base de dades|**```bellavistanieto```**|
-|**```<contrasenya usuari de la connexió>```**|Contrasenya de l'usuari de connexió|**```bellavistanieto123```**|
+|**```<contrasenya-de-l-usuari-de-la-connexio>```**|Contrasenya de l'usuari de connexió|**```bellavistanieto123```**|
 
 * **Comandes a executar**:
 
 ```
 sudo sed -i 's/<nom-de-la-vostra-base-de-dades>/bellavista-nieto/g' comandes-exemple.txt
 sudo sed -i 's/<usuari-de-connexio-a-la-base-de-dades>/bellavistanieto/g' comandes-exemple.txt
-sudo sed -i 's/<contrasenya usuari de la connexió>/bellavistanieto123/g' comandes-exemple.txt
+sudo sed -i 's/<contrasenya-de-l-usuari-de-la-connexio>/bellavistanieto123/g' comandes-exemple.txt
 ```
 
-<details><summary>Pitja per veure el contingut del fitxer comandes-exemple.txt desprès de l'execució de les comandes.</summary>
+<br>
+<hr>
+<br>
 
-Executem una comanda per veure com ha quedat el contingut del fitxer **```comandes-exemple.txt```**. 
+<details><summary>Pitja per veure la comanda per comptar substitucions.</summary>
 
-* **Comanda a executar**:
+> Si voleu saber la quantitat de substitucions que farem podeu executar aquesta comanda:
+> 
+> * **Comanda a executar**:
+> 
+> ```
+> grep -o '<nom-de-la-vostra-base-de-dades>' comandes-exemple.txt | wc -l 
+> grep -o '<usuari-de-connexio-a-la-base-de-dades>' comandes-exemple.txt | wc -l 
+> grep -o '<contrasenya-de-l-usuari-de-la-connexio>' comandes-exemple.txt | wc -l 
+> ```
+> 
+> * **Sortida**:
+> <pre>
+> profe@smx2 $ grep -o '<nom-de-la-vostra-base-de-dades>' comandes-exemple.txt | wc -l
+> 3
+> profe@smx2 $ grep -o '<usuari-de-connexio-a-la-base-de-dades>' comandes-exemple.txt | wc -l
+> 3
+> profe@smx2 $ grep -o '<contrasenya-de-l-usuari-de-la-connexio>' comandes-exemple.txt | wc -l
+> 2
+> profe@smx2 $
+> </pre>
+</details>
 
-```
-cat comandes-exemple.txt
-```
+<br>
+<hr>
+<br>
 
-* **Sortida**:
-
+### Així és com quedarà finalment el fitxer comandes-exemple.txt si heu executat correctament TOTES les comandes.
 
 ```bash
 sudo docker image list |grep php:7.0-fpm
@@ -551,4 +598,3 @@ sudo vi index.php
 $link = mysqli_connect('db', 'bellavistanieto', 'bellavistanieto123', 'bellavista-nieto');
 ```
 <hr>
-</details>
