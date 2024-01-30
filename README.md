@@ -17,6 +17,8 @@ Els grups han quedat de la següent manera:
     <th rowspan="2" style="text-align: center;">Contrasenya de l'usuari de connexió</th>
   </tr>
   <tr></tr>
+  <tr><td colspan="6"></td></tr>
+
   <tr>
     <td>7312</td><td>Agustí Corbella, Oriol</td><td rowspan="2" style="text-align: center;">Grup&nbsp;01</td><td rowspan="2" style="text-align: center;">agusti-roman</td><td rowspan="2" style="text-align: center;">agustiroman</td><td rowspan="2" style="text-align: center;">agustiroman123</td>
   </tr>
