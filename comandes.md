@@ -39,8 +39,6 @@ cat comandes-exemple.txt
 
 * **Sortida**:
 
-<hr>
-
 ```bash
 
 sudo docker image list |grep php:7.0-fpm
