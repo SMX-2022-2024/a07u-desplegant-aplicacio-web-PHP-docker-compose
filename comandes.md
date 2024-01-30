@@ -30,7 +30,9 @@ sudo sed -i 's/Cadena a substituir/Informació de la columna/g' comandes-exemple
 En aquest exemple, es faran les substitucions sobre el fitxer **```comandes-exemple.txt```**, mentre que vosaltres cal que les feu sobre el fitxer **```comandes.txt```**
 
 <details><summary>Pitja per veure el contingut del fitxer comandes-exemple.txt</summary>
+<br>
 
+>
 > Executem una comanda previa per veure el contingut del fitxer **```comandes-exemple.txt```**. 
 > 
 > * **Comanda a executar**:
@@ -195,7 +197,7 @@ En aquest exemple, es faran les substitucions sobre el fitxer **```comandes-exem
 > 
 > $link = mysqli_connect('db', '<usuari-de-connexio-a-la-base-de-dades>', '<contrasenya-de-l-usuari-de-la-connexio>', '<nom-de-la-vostra-base-de-dades>');
 > ```
-<hr>
+><hr>
 </details>
 
 ## Primera substitució
@@ -216,6 +218,8 @@ sudo sed -i 's/<CognomAlumne1>-<CognomAlumne2>/bellavista-nieto/g' comandes-exem
 
 <details><summary>Pitja per veure la comanda per comptar substitucions.</summary>
 
+> <hr>
+>
 > Si voleu saber la quantitat de substitucions que farem podeu executar aquesta comanda:
 > 
 > * **Comanda a executar**:
@@ -230,6 +234,7 @@ sudo sed -i 's/<CognomAlumne1>-<CognomAlumne2>/bellavista-nieto/g' comandes-exem
 > 11
 > profe@smx2 $
 > </pre>
+><hr>
 </details>
 
 <br>
@@ -237,162 +242,163 @@ sudo sed -i 's/<CognomAlumne1>-<CognomAlumne2>/bellavista-nieto/g' comandes-exem
 <br>
 
 <details><summary>Pitja per veure el contingut del fitxer comandes-exemple.txt desprès de l'execució de la primera de les comandes.</summary>
-<hr>
 
-```bash
-sudo docker image list |grep php:7.0-fpm
-
-sudo docker image list |grep nginx
-
-sudo docker image list |grep mariadb
-
-sudo docker pull php:7.0-fpm
-
-sudo docker pull nginx
-
-sudo docker pull mariadb
-
-sudo mkdir ~/bellavista-nieto
-
-cd ~/bellavista-nieto
-
-sudo mkdir ~/bellavista-nieto/webSrv
-
-sudo vi ~/bellavista-nieto/webSrv/Dockerfile
-
-FROM nginx
-COPY ./default.conf /etc/nginx/conf.d/default.conf
-
-sudo vi ~/bellavista-nieto/webSrv/default.conf
-
-server {  
-
-     listen 80 default_server;  
-     root /var/www/html;  
-     index index.html index.php;  
-
-     charset utf-8;  
-
-     location / {  
-      try_files $uri $uri/ /index.php?$query_string;  
-     }  
-
-     location = /favicon.ico { access_log off; log_not_found off; }  
-     location = /robots.txt { access_log off; log_not_found off; }  
-
-     access_log off;  
-     error_log /var/log/nginx/error.log error;  
-
-     sendfile off;  
-
-     client_max_body_size 100m;  
-
-     location ~ .php$ {  
-      fastcgi_split_path_info ^(.+.php)(/.+)$;  
-      fastcgi_pass php:9000;  
-      fastcgi_index index.php;  
-      include fastcgi_params;
-      fastcgi_read_timeout 300;
-      fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;  
-      fastcgi_intercept_errors off;  
-      fastcgi_buffer_size 16k;  
-      fastcgi_buffers 4 16k;  
-    }  
-
-     location ~ /.ht {  
-      deny all;  
-     }  
-    }	
-    
-sudo git clone https://github.com/rapidcode-technologies-private-limited/php-e-commerce.git ~/bellavista-nieto/phpSrv/
-
-sudo vi ~/bellavista-nieto/phpSrv/Dockerfile
-
-FROM php:7.0-fpm
-RUN docker-php-ext-install mysqli pdo pdo_mysql
-RUN docker-php-ext-enable mysqli
-
-sudo vi ~/bellavista-nieto/docker-compose.yml
-
-version: "3.9"
-services:
-   nginx:
-     build: ./webSrv/
-     ports:
-       - 80:80
-  
-     volumes:
-         - ./phpSrv/:/var/www/html/
-
-   php:
-     build: ./phpSrv/
-     expose:
-       - 9000
-     volumes:
-        - ./phpSrv/:/var/www/html/
-
-
-   db:    
-      image: mariadb  
-      volumes: 
-        -    mysql-data:/var/lib/mysql
-      environment:  
-       MYSQL_ROOT_PASSWORD: mariadb
-       MYSQL_DATABASE: <nom-de-la-vostra-base-de-dades> 
-
-volumes:
-    mysql-data:
-    
-cd ~/bellavista-nieto/
-sudo docker compose up -d
-
-sudo docker container list -a | grep db-1
-
-sudo docker exec -ti bellavista-nieto-db-1 bash
-
-mariadb -u root -pmariadb
-
-CREATE USER '<usuari-de-connexio-a-la-base-de-dades>'@'%' IDENTIFIED BY '<contrasenya-de-l-usuari-de-la-connexio>';
-
-SELECT user FROM mysql.user;
-
-GRANT ALL PRIVILEGES ON *.* TO '<usuari-de-connexio-a-la-base-de-dades>'@'%';
-
-FLUSH PRIVILEGES;
-
-show databases;
-
-use <nom-de-la-vostra-base-de-dades>;
-
-CREATE TABLE products(
-  id mediumint(8) unsigned NOT NULL auto_increment,
-  Name varchar(255) default NULL,
-  Price varchar(255) default NULL,
-  ImageUrl varchar(255) default NULL,
-  PRIMARY KEY (id)
-) AUTO_INCREMENT=1; 
-
-INSERT INTO products (Name,Price,ImageUrl)
-VALUES ("Laptop","100","c-1.png"),
-       ("Drone","200","c-2.png"),
-       ("VR","300","c-3.png"),
-       ("Tablet","50","c-5.png"),
-       ("Watch","90","c-6.png"),
-       ("Phone Covers","20","c-7.png"),
-       ("Phone","80","c-8.png"),
-       ("Laptop","150","c-4.png");
-       
-exit
-
-exit
-
-cd ~/bellavista-nieto/phpSrv
-
-sudo vi index.php
-
-$link = mysqli_connect('db', '<usuari-de-connexio-a-la-base-de-dades>', '<contrasenya-de-l-usuari-de-la-connexio>', '<nom-de-la-vostra-base-de-dades>');
-```
-<hr>
+> <hr>
+> 
+> ```bash
+> sudo docker image list |grep php:7.0-fpm
+> 
+> sudo docker image list |grep nginx
+> 
+> sudo docker image list |grep mariadb
+> 
+> sudo docker pull php:7.0-fpm
+> 
+> sudo docker pull nginx
+> 
+> sudo docker pull mariadb
+> 
+> sudo mkdir ~/bellavista-nieto
+> 
+> cd ~/bellavista-nieto
+> 
+> sudo mkdir ~/bellavista-nieto/webSrv
+> 
+> sudo vi ~/bellavista-nieto/webSrv/Dockerfile
+> 
+> FROM nginx
+> COPY ./default.conf /etc/nginx/conf.d/default.conf
+> 
+> sudo vi ~/bellavista-nieto/webSrv/default.conf
+> 
+> server {  
+> 
+>      listen 80 default_server;  
+>      root /var/www/html;  
+>      index index.html index.php;  
+> 
+>      charset utf-8;  
+> 
+>      location / {  
+>       try_files $uri $uri/ /index.php?$query_string;  
+>      }  
+> 
+>      location = /favicon.ico { access_log off; log_not_found off; }  
+>      location = /robots.txt { access_log off; log_not_found off; }  
+> 
+>      access_log off;  
+>      error_log /var/log/nginx/error.log error;  
+> 
+>      sendfile off;  
+> 
+>      client_max_body_size 100m;  
+> 
+>      location ~ .php$ {  
+>       fastcgi_split_path_info ^(.+.php)(/.+)$;  
+>       fastcgi_pass php:9000;  
+>       fastcgi_index index.php;  
+>       include fastcgi_params;
+>       fastcgi_read_timeout 300;
+>       fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;  
+>       fastcgi_intercept_errors off;  
+>       fastcgi_buffer_size 16k;  
+>       fastcgi_buffers 4 16k;  
+>     }  
+> 
+>      location ~ /.ht {  
+>       deny all;  
+>      }  
+>     }	
+>     
+> sudo git clone https://github.com/rapidcode-technologies-private-limited/php-e-commerce.git ~/bellavista-nieto/phpSrv/
+> 
+> sudo vi ~/bellavista-nieto/phpSrv/Dockerfile
+> 
+> FROM php:7.0-fpm
+> RUN docker-php-ext-install mysqli pdo pdo_mysql
+> RUN docker-php-ext-enable mysqli
+> 
+> sudo vi ~/bellavista-nieto/docker-compose.yml
+> 
+> version: "3.9"
+> services:
+>    nginx:
+>      build: ./webSrv/
+>      ports:
+>        - 80:80
+>   
+>      volumes:
+>          - ./phpSrv/:/var/www/html/
+> 
+>    php:
+>      build: ./phpSrv/
+>      expose:
+>        - 9000
+>      volumes:
+>         - ./phpSrv/:/var/www/html/
+> 
+> 
+>    db:    
+>       image: mariadb  
+>       volumes: 
+>         -    mysql-data:/var/lib/mysql
+>       environment:  
+>        MYSQL_ROOT_PASSWORD: mariadb
+>        MYSQL_DATABASE: <nom-de-la-vostra-base-de-dades> 
+> 
+> volumes:
+>     mysql-data:
+>     
+> cd ~/bellavista-nieto/
+> sudo docker compose up -d
+> 
+> sudo docker container list -a | grep db-1
+> 
+> sudo docker exec -ti bellavista-nieto-db-1 bash
+> 
+> mariadb -u root -pmariadb
+> 
+> CREATE USER '<usuari-de-connexio-a-la-base-de-dades>'@'%' IDENTIFIED BY '<contrasenya-de-l-usuari-de-la-connexio>';
+> 
+> SELECT user FROM mysql.user;
+> 
+> GRANT ALL PRIVILEGES ON *.* TO '<usuari-de-connexio-a-la-base-de-dades>'@'%';
+> 
+> FLUSH PRIVILEGES;
+> 
+> show databases;
+> 
+> use <nom-de-la-vostra-base-de-dades>;
+> 
+> CREATE TABLE products(
+>   id mediumint(8) unsigned NOT NULL auto_increment,
+>   Name varchar(255) default NULL,
+>   Price varchar(255) default NULL,
+>   ImageUrl varchar(255) default NULL,
+>   PRIMARY KEY (id)
+> ) AUTO_INCREMENT=1; 
+> 
+> INSERT INTO products (Name,Price,ImageUrl)
+> VALUES ("Laptop","100","c-1.png"),
+>        ("Drone","200","c-2.png"),
+>        ("VR","300","c-3.png"),
+>        ("Tablet","50","c-5.png"),
+>        ("Watch","90","c-6.png"),
+>        ("Phone Covers","20","c-7.png"),
+>        ("Phone","80","c-8.png"),
+>        ("Laptop","150","c-4.png");
+>        
+> exit
+> 
+> exit
+> 
+> cd ~/bellavista-nieto/phpSrv
+> 
+> sudo vi index.php
+> 
+> $link = mysqli_connect('db', '<usuari-de-connexio-a-la-base-de-dades>', '<contrasenya-de-l-usuari-de-la-connexio>', '<nom-de-la-vostra-base-de-dades>');
+> ```
+> <hr>
 </details>
 
 
@@ -446,157 +452,157 @@ sudo sed -i 's/<contrasenya-de-l-usuari-de-la-connexio>/bellavistanieto123/g' co
 
 ### Així és com quedarà finalment el fitxer comandes-exemple.txt si heu executat correctament TOTES les comandes.
 
-```bash
-sudo docker image list |grep php:7.0-fpm
-
-sudo docker image list |grep nginx
-
-sudo docker image list |grep mariadb
-
-sudo docker pull php:7.0-fpm
-
-sudo docker pull nginx
-
-sudo docker pull mariadb
-
-sudo mkdir ~/bellavista-nieto
-
-cd ~/bellavista-nieto
-
-sudo mkdir ~/bellavista-nieto/webSrv
-
-sudo vi ~/bellavista-nieto/webSrv/Dockerfile
-
-FROM nginx
-COPY ./default.conf /etc/nginx/conf.d/default.conf
-
-sudo vi ~/bellavista-nieto/webSrv/default.conf
-
-server {  
-
-     listen 80 default_server;  
-     root /var/www/html;  
-     index index.html index.php;  
-
-     charset utf-8;  
-
-     location / {  
-      try_files $uri $uri/ /index.php?$query_string;  
-     }  
-
-     location = /favicon.ico { access_log off; log_not_found off; }  
-     location = /robots.txt { access_log off; log_not_found off; }  
-
-     access_log off;  
-     error_log /var/log/nginx/error.log error;  
-
-     sendfile off;  
-
-     client_max_body_size 100m;  
-
-     location ~ .php$ {  
-      fastcgi_split_path_info ^(.+.php)(/.+)$;  
-      fastcgi_pass php:9000;  
-      fastcgi_index index.php;  
-      include fastcgi_params;
-      fastcgi_read_timeout 300;
-      fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;  
-      fastcgi_intercept_errors off;  
-      fastcgi_buffer_size 16k;  
-      fastcgi_buffers 4 16k;  
-    }  
-
-     location ~ /.ht {  
-      deny all;  
-     }  
-    }	
-    
-sudo git clone https://github.com/rapidcode-technologies-private-limited/php-e-commerce.git ~/bellavista-nieto/phpSrv/
-
-sudo vi ~/bellavista-nieto/phpSrv/Dockerfile
-
-FROM php:7.0-fpm
-RUN docker-php-ext-install mysqli pdo pdo_mysql
-RUN docker-php-ext-enable mysqli
-
-sudo vi ~/bellavista-nieto/docker-compose.yml
-
-version: "3.9"
-services:
-   nginx:
-     build: ./webSrv/
-     ports:
-       - 80:80
-  
-     volumes:
-         - ./phpSrv/:/var/www/html/
-
-   php:
-     build: ./phpSrv/
-     expose:
-       - 9000
-     volumes:
-        - ./phpSrv/:/var/www/html/
-
-
-   db:    
-      image: mariadb  
-      volumes: 
-        -    mysql-data:/var/lib/mysql
-      environment:  
-       MYSQL_ROOT_PASSWORD: mariadb
-       MYSQL_DATABASE: bellavista-nieto 
-
-volumes:
-    mysql-data:
-    
-cd ~/bellavista-nieto/
-sudo docker compose up -d
-
-sudo docker container list -a | grep db-1
-
-sudo docker exec -ti bellavista-nieto-db-1 bash
-
-mariadb -u root -pmariadb
-
-CREATE USER 'bellavistanieto'@'%' IDENTIFIED BY '<contrasenya-de-l-usuari-de-la-connexio>';
-
-SELECT user FROM mysql.user;
-
-GRANT ALL PRIVILEGES ON *.* TO 'bellavistanieto'@'%';
-
-FLUSH PRIVILEGES;
-
-show databases;
-
-use bellavista-nieto;
-
-CREATE TABLE products(
-  id mediumint(8) unsigned NOT NULL auto_increment,
-  Name varchar(255) default NULL,
-  Price varchar(255) default NULL,
-  ImageUrl varchar(255) default NULL,
-  PRIMARY KEY (id)
-) AUTO_INCREMENT=1; 
-
-INSERT INTO products (Name,Price,ImageUrl)
-VALUES ("Laptop","100","c-1.png"),
-       ("Drone","200","c-2.png"),
-       ("VR","300","c-3.png"),
-       ("Tablet","50","c-5.png"),
-       ("Watch","90","c-6.png"),
-       ("Phone Covers","20","c-7.png"),
-       ("Phone","80","c-8.png"),
-       ("Laptop","150","c-4.png");
-       
-exit
-
-exit
-
-cd ~/bellavista-nieto/phpSrv
-
-sudo vi index.php
-
-$link = mysqli_connect('db', 'bellavistanieto', 'bellavistanieto123', 'bellavista-nieto');
-```
-<hr>
+>```bash
+> sudo docker image list |grep php:7.0-fpm
+> 
+> sudo docker image list |grep nginx
+> 
+> sudo docker image list |grep mariadb
+> 
+> sudo docker pull php:7.0-fpm
+> 
+> sudo docker pull nginx
+> 
+> sudo docker pull mariadb
+> 
+> sudo mkdir ~/bellavista-nieto
+> 
+> cd ~/bellavista-nieto
+> 
+> sudo mkdir ~/bellavista-nieto/webSrv
+> 
+> sudo vi ~/bellavista-nieto/webSrv/Dockerfile
+> 
+> FROM nginx
+> COPY ./default.conf /etc/nginx/conf.d/default.conf
+> 
+> sudo vi ~/bellavista-nieto/webSrv/default.conf
+> 
+> server {  
+> 
+>      listen 80 default_server;  
+>      root /var/www/html;  
+>      index index.html index.php;  
+> 
+>      charset utf-8;  
+> 
+>      location / {  
+>       try_files $uri $uri/ /index.php?$query_string;  
+>      }  
+> 
+>      location = /favicon.ico { access_log off; log_not_found off; }  
+>      location = /robots.txt { access_log off; log_not_found off; }  
+> 
+>      access_log off;  
+>      error_log /var/log/nginx/error.log error;  
+> 
+>      sendfile off;  
+> 
+>      client_max_body_size 100m;  
+> 
+>      location ~ .php$ {  
+>       fastcgi_split_path_info ^(.+.php)(/.+)$;  
+>       fastcgi_pass php:9000;  
+>       fastcgi_index index.php;  
+>       include fastcgi_params;
+>       fastcgi_read_timeout 300;
+>       fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;  
+>       fastcgi_intercept_errors off;  
+>       fastcgi_buffer_size 16k;  
+>       fastcgi_buffers 4 16k;  
+>     }  
+> 
+>      location ~ /.ht {  
+>       deny all;  
+>      }  
+>     }	
+>     
+> sudo git clone https://github.com/rapidcode-technologies-private-limited/php-e-commerce.git ~/bellavista-nieto/phpSrv/
+> 
+> sudo vi ~/bellavista-nieto/phpSrv/Dockerfile
+> 
+> FROM php:7.0-fpm
+> RUN docker-php-ext-install mysqli pdo pdo_mysql
+> RUN docker-php-ext-enable mysqli
+> 
+> sudo vi ~/bellavista-nieto/docker-compose.yml
+> 
+> version: "3.9"
+> services:
+>    nginx:
+>      build: ./webSrv/
+>      ports:
+>        - 80:80
+>   
+>      volumes:
+>          - ./phpSrv/:/var/www/html/
+> 
+>    php:
+>      build: ./phpSrv/
+>      expose:
+>        - 9000
+>      volumes:
+>         - ./phpSrv/:/var/www/html/
+> 
+> 
+>    db:    
+>       image: mariadb  
+>       volumes: 
+>         -    mysql-data:/var/lib/mysql
+>       environment:  
+>        MYSQL_ROOT_PASSWORD: mariadb
+>        MYSQL_DATABASE: bellavista-nieto 
+> 
+> volumes:
+>     mysql-data:
+>     
+> cd ~/bellavista-nieto/
+> sudo docker compose up -d
+> 
+> sudo docker container list -a | grep db-1
+> 
+> sudo docker exec -ti bellavista-nieto-db-1 bash
+> 
+> mariadb -u root -pmariadb
+> 
+> CREATE USER 'bellavistanieto'@'%' IDENTIFIED BY '<contrasenya-de-l-usuari-de-la-connexio>';
+> 
+> SELECT user FROM mysql.user;
+> 
+> GRANT ALL PRIVILEGES ON *.* TO 'bellavistanieto'@'%';
+> 
+> FLUSH PRIVILEGES;
+> 
+> show databases;
+> 
+> use bellavista-nieto;
+> 
+> CREATE TABLE products(
+>   id mediumint(8) unsigned NOT NULL auto_increment,
+>   Name varchar(255) default NULL,
+>   Price varchar(255) default NULL,
+>   ImageUrl varchar(255) default NULL,
+>   PRIMARY KEY (id)
+> ) AUTO_INCREMENT=1; 
+> 
+> INSERT INTO products (Name,Price,ImageUrl)
+> VALUES ("Laptop","100","c-1.png"),
+>        ("Drone","200","c-2.png"),
+>        ("VR","300","c-3.png"),
+>        ("Tablet","50","c-5.png"),
+>        ("Watch","90","c-6.png"),
+>        ("Phone Covers","20","c-7.png"),
+>        ("Phone","80","c-8.png"),
+>        ("Laptop","150","c-4.png");
+>        
+> exit
+> 
+> exit
+> 
+> cd ~/bellavista-nieto/phpSrv
+> 
+> sudo vi index.php
+> 
+> $link = mysqli_connect('db', 'bellavistanieto', 'bellavistanieto123', 'bellavista-nieto');
+> ```
+> <hr>
