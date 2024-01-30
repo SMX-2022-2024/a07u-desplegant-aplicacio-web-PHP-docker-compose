@@ -401,6 +401,10 @@ sudo sed -i 's/<CognomAlumne1>-<CognomAlumne2>/bellavista-nieto/g' comandes-exem
 > <hr>
 </details>
 
+<br>
+<hr>
+<br>
+
 
 ## Resta de substitucions
 
@@ -606,3 +610,7 @@ sudo sed -i 's/<contrasenya-de-l-usuari-de-la-connexio>/bellavistanieto123/g' co
 > $link = mysqli_connect('db', 'bellavistanieto', 'bellavistanieto123', 'bellavista-nieto');
 > ```
 > <hr>
+
+<br>
+<hr>
+<br>
