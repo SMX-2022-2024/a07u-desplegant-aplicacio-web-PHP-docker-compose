@@ -71,6 +71,15 @@ Els grups han quedat de la següent manera:
 <tr><td colspan="6"></td></tr>
 </table>
 
+<details><summary>Pitja per veure TOTES les comandes per fer l'activitat</summary>
+<hr>
+
+> ### [**TOTES** les comandes per fer l'activitat](./comandes.md)
+> <br>
+<hr>
+
+</details>
+
 ## Pas 1: Comprovació de que tenim descarregades les imatges.
 
 * **Comanda a executar**:
