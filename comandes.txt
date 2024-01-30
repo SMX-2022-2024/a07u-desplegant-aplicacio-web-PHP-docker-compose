@@ -1,3 +1,4 @@
+
 sudo docker image list |grep php:7.0-fpm
 
 sudo docker image list |grep nginx
@@ -96,7 +97,7 @@ services:
         -    mysql-data:/var/lib/mysql
       environment:  
        MYSQL_ROOT_PASSWORD: mariadb
-       MYSQL_DATABASE: <nom de la vostra base de dades> 
+       MYSQL_DATABASE: <nom-de-la-vostra-base-de-dades> 
 
 volumes:
     mysql-data:
@@ -110,17 +111,17 @@ sudo docker exec -ti <CognomAlumne1>-<CognomAlumne2>-db-1 bash
 
 mariadb -u root -pmariadb
 
-CREATE USER '<usuari de connexió a la base de dades>'@'%' IDENTIFIED BY '<Contrasenya de l'usuari de connexió>';
+CREATE USER '<usuari-de-connexio-a-la-base-de-dades>'@'%' IDENTIFIED BY '<contrasenya-de-l-usuari-de-la-connexio>';
 
 SELECT user FROM mysql.user;
 
-GRANT ALL PRIVILEGES ON *.* TO '<usuari de connexió a la base de dades>'@'%';
+GRANT ALL PRIVILEGES ON *.* TO '<usuari-de-connexio-a-la-base-de-dades>'@'%';
 
 FLUSH PRIVILEGES;
 
 show databases;
 
-use <nom de la vostra base de dades>;
+use <nom-de-la-vostra-base-de-dades>;
 
 CREATE TABLE products(
   id mediumint(8) unsigned NOT NULL auto_increment,
@@ -148,5 +149,4 @@ cd ~/<CognomAlumne1>-<CognomAlumne2>/phpSrv
 
 sudo vi index.php
 
-$link = mysqli_connect('db', '<usuari de connexió a la base de dades>', '<contrasenya usuari de la connexió>', '<nom de la vostra base de dades>');
-
+$link = mysqli_connect('db', '<usuari-de-connexio-a-la-base-de-dades>', '<contrasenya-de-l-usuari-de-la-connexio>', '<nom-de-la-vostra-base-de-dades>');

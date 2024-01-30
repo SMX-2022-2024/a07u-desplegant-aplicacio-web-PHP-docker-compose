@@ -1,19 +1,33 @@
-Del fitxer [comandes.txt](./comandes.txt) podeu substituir les següents cadenes.
+# **TOTES** les comandes per fer l'activitat
 
-|Cadena a substituir|Informació de la columna|Exemple|
-|---|---|---|
-|**```<CognomAlumne1>-<CognomAlumne2>```**|Nom de la base de dades|**```nieto-pardo```**|
-|**```<nom de la vostra base de dades>```**|Nom de la base de dades|**```nieto-pardo```**|
-|**```<usuari de connexió a la base de dades>```**|Usuari de connexió a la base de dades|**```nietopardo```**|
-|**```<contrasenya de l'usuari de connexió>```**|Contrasenya de l'usuari de connexió|**```nietopardo123```**|
+En el fitxer d'aquest repositori teniu el fitxer [**```comandes.txt```**](./comandes.txt) que conté **TOTES** les comandes necessaries per fer l'activitat.
 
-Un cop fet aquestes substitucions, si ho heu fet bé, ja teniu totes les comandes que cal que executeu per fer l'activitat.
+Les comandes apareixen amb un seguit de cadenes de text genèriques, de manera que es poden substituir amb els valors que hi ha la [taula dels grups](./README.md#taula-dels-grups) que apareix a l'inici de l'activitat.
+
+A la columna **Exemple**, apareix una cadena de text, que es farà servir com  exemple per poder explicar com cal fer les substitucions.
+
+Us recordo que de les cadenes de text a substituir **sempre cal incloure** els caracters **```<```** **```>```**, ja que apareixen com a **delimitadors** de les cadenes de text genèriques.
+
+A continuació es facilita una relació les cadenes de text genèriques i com es poden substituir.
+
+|Cadena a substituir|Nom de la columna de la taula|Vegades que<br>apareix|Exemple|
+|---|---|:---:|---|
+|**```<CognomAlumne1>-<CognomAlumne2>```**|Nom de la base de dades|**11**|**```bellavista-nieto```**|
+|**```<nom-de-la-vostra-base-de-dades>```**|Nom de la base de dades|**3**|**```bellavista-nieto```**|
+|**```<usuari-de-connexio-a-la-base-de-dades>```**|Usuari de connexió a la base de dades|**3**|**```bellavistanieto```**|
+|**```<contrasenya-de-l-usuari-de-la-connexio>```**|Contrasenya de l'usuari de connexió|**1**|**```bellavistanieto123```**|
+
+Un cop fet aquestes substitucions, si ho heu fet bé, tindreu totes les comandes que cal que executeu per fer la vostra activitat.
+
+La comanda que es farà servir és **```sed```** (***stream editor*** -> **editor de flux**). Es tracta d'un editor de text de línia d'ordres no interactiu.
 
 ```
 sudo sed -i 's/Cadena a substituir/Informació de la columna/g' comandes-exemple.txt
 ```
 
 Exemple de comandes per fer les substitucions.
+
+<details><summary>Pitja per veure el contingut del fitxer comandes-exemple.txt</summary>
 
 Executem una comanda previa per veure el contingut del fitxer **```comandes-exemple.txt```**. 
 
@@ -25,7 +39,10 @@ cat comandes-exemple.txt
 
 * **Sortida**:
 
-<pre>
+<hr>
+
+```bash
+
 sudo docker image list |grep php:7.0-fpm
 
 sudo docker image list |grep nginx
@@ -124,7 +141,7 @@ services:
         -    mysql-data:/var/lib/mysql
       environment:  
        MYSQL_ROOT_PASSWORD: mariadb
-       MYSQL_DATABASE: <nom de la vostra base de dades> 
+       MYSQL_DATABASE: <nom-de-la-vostra-base-de-dades> 
 
 volumes:
     mysql-data:
@@ -138,17 +155,17 @@ sudo docker exec -ti <CognomAlumne1>-<CognomAlumne2>-db-1 bash
 
 mariadb -u root -pmariadb
 
-CREATE USER '<usuari de connexió a la base de dades>'@'%' IDENTIFIED BY '<Contrasenya de l'usuari de connexió>';
+CREATE USER '<usuari-de-connexio-a-la-base-de-dades>'@'%' IDENTIFIED BY '<contrasenya-de-l-usuari-de-la-connexio>';
 
 SELECT user FROM mysql.user;
 
-GRANT ALL PRIVILEGES ON *.* TO '<usuari de connexió a la base de dades>'@'%';
+GRANT ALL PRIVILEGES ON *.* TO '<usuari-de-connexio-a-la-base-de-dades>'@'%';
 
 FLUSH PRIVILEGES;
 
 show databases;
 
-use <nom de la vostra base de dades>;
+use <nom-de-la-vostra-base-de-dades>;
 
 CREATE TABLE products(
   id mediumint(8) unsigned NOT NULL auto_increment,
@@ -176,35 +193,27 @@ cd ~/<CognomAlumne1>-<CognomAlumne2>/phpSrv
 
 sudo vi index.php
 
-$link = mysqli_connect('db', '<usuari de connexió a la base de dades>', '<contrasenya de l'usuari de connexió>', '<nom de la vostra base de dades>');
-
-</pre>
-
+$link = mysqli_connect('db', '<usuari-de-connexio-a-la-base-de-dades>', '<contrasenya-de-l-usuari-de-la-connexio>', '<nom-de-la-vostra-base-de-dades>');
+```
+<hr>
+</details>
 
 ## Primera substitució
 
 |Cadena a substituir|Informació de la columna|Exemple|
 |---|---|---|
-|**```<CognomAlumne1>-<CognomAlumne2>```**|Nom de la base de dades|**```nieto-pardo```**|
-
-* **Comanda a executar**:
-
-
-```
-sudo sed -i 's/<CognomAlumne1>-<CognomAlumne2>/nieto-pardo/g' comandes-exemple.txt
-```
-
-Executem una comanda per veure com ha quedat el contingut del fitxer **```comandes-exemple.txt```**. 
+|**```<CognomAlumne1>-<CognomAlumne2>```**|Nom de la base de dades|**```bellavista-nieto```**|
 
 * **Comanda a executar**:
 
 ```
-cat comandes-exemple.txt
+sudo sed -i 's/<CognomAlumne1>-<CognomAlumne2>/bellavista-nieto/g' comandes-exemple.txt
 ```
 
-* **Sortida**:
+<details><summary>Pitja per veure el contingut del fitxer comandes-exemple.txt desprès de l'execució de la primera de les comandes.</summary>
+<hr>
 
-<pre>
+```bash
 sudo docker image list |grep php:7.0-fpm
 
 sudo docker image list |grep nginx
@@ -217,18 +226,18 @@ sudo docker pull nginx
 
 sudo docker pull mariadb
 
-sudo mkdir ~/nieto-pardo
+sudo mkdir ~/bellavista-nieto
 
-cd ~/nieto-pardo
+cd ~/bellavista-nieto
 
-sudo mkdir ~/nieto-pardo/webSrv
+sudo mkdir ~/bellavista-nieto/webSrv
 
-sudo vi ~/nieto-pardo/webSrv/Dockerfile
+sudo vi ~/bellavista-nieto/webSrv/Dockerfile
 
 FROM nginx
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 
-sudo vi ~/nieto-pardo/webSrv/default.conf
+sudo vi ~/bellavista-nieto/webSrv/default.conf
 
 server {  
 
@@ -269,15 +278,15 @@ server {
      }  
     }	
     
-sudo git clone https://github.com/rapidcode-technologies-private-limited/php-e-commerce.git ~/nieto-pardo/phpSrv/
+sudo git clone https://github.com/rapidcode-technologies-private-limited/php-e-commerce.git ~/bellavista-nieto/phpSrv/
 
-sudo vi ~/nieto-pardo/phpSrv/Dockerfile
+sudo vi ~/bellavista-nieto/phpSrv/Dockerfile
 
 FROM php:7.0-fpm
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 RUN docker-php-ext-enable mysqli
 
-sudo vi ~/nieto-pardo/docker-compose.yml
+sudo vi ~/bellavista-nieto/docker-compose.yml
 
 version: "3.9"
 services:
@@ -303,31 +312,31 @@ services:
         -    mysql-data:/var/lib/mysql
       environment:  
        MYSQL_ROOT_PASSWORD: mariadb
-       MYSQL_DATABASE: <nom de la vostra base de dades> 
+       MYSQL_DATABASE: <nom-de-la-vostra-base-de-dades> 
 
 volumes:
     mysql-data:
     
-cd ~/nieto-pardo/
+cd ~/bellavista-nieto/
 sudo docker compose up -d
 
 sudo docker container list -a | grep db-1
 
-sudo docker exec -ti nieto-pardo-db-1 bash
+sudo docker exec -ti bellavista-nieto-db-1 bash
 
 mariadb -u root -pmariadb
 
-CREATE USER '<usuari de connexió a la base de dades>'@'%' IDENTIFIED BY '<Contrasenya de l'usuari de connexió>';
+CREATE USER '<usuari-de-connexio-a-la-base-de-dades>'@'%' IDENTIFIED BY '<contrasenya-de-l-usuari-de-la-connexio>';
 
 SELECT user FROM mysql.user;
 
-GRANT ALL PRIVILEGES ON *.* TO '<usuari de connexió a la base de dades>'@'%';
+GRANT ALL PRIVILEGES ON *.* TO '<usuari-de-connexio-a-la-base-de-dades>'@'%';
 
 FLUSH PRIVILEGES;
 
 show databases;
 
-use <nom de la vostra base de dades>;
+use <nom-de-la-vostra-base-de-dades>;
 
 CREATE TABLE products(
   id mediumint(8) unsigned NOT NULL auto_increment,
@@ -351,31 +360,33 @@ exit
 
 exit
 
-cd ~/nieto-pardo/phpSrv
+cd ~/bellavista-nieto/phpSrv
 
 sudo vi index.php
 
-$link = mysqli_connect('db', '<usuari de connexió a la base de dades>', '<contrasenya de l'usuari de connexió>', '<nom de la vostra base de dades>');
-
-</pre>
+$link = mysqli_connect('db', '<usuari-de-connexio-a-la-base-de-dades>', '<contrasenya-de-l-usuari-de-la-connexio>', '<nom-de-la-vostra-base-de-dades>');
+```
+<hr>
+</details>
 
 
 ## Resta de substitucions
 
 |Cadena a substituir|Informació de la columna|Exemple|
 |---|---|---|
-|**```<nom de la vostra base de dades>```**|Nom de la base de dades|**```nieto-pardo```**|
-|**```<usuari de connexió a la base de dades>```**|Usuari de connexió a la base de dades|**```nietopardo```**|
-|**```<contrasenya usuari de la connexió>```**|Contrasenya de l'usuari de connexió|**```nietopardo123```**|
+|**```<nom-de-la-vostra-base-de-dades>```**|Nom de la base de dades|**```bellavista-nieto```**|
+|**```<usuari-de-connexio-a-la-base-de-dades>```**|Usuari de connexió a la base de dades|**```bellavistanieto```**|
+|**```<contrasenya usuari de la connexió>```**|Contrasenya de l'usuari de connexió|**```bellavistanieto123```**|
 
 * **Comandes a executar**:
 
 ```
-sudo sed -i 's/<nom de la vostra base de dades>/nieto-pardo/g' comandes-exemple.txt
-sudo sed -i 's/<usuari de connexió a la base de dades>/nietopardo/g' comandes-exemple.txt
-sudo sed -i 's/<contrasenya usuari de la connexió>/nietopardo123/g' comandes-exemple.txt
+sudo sed -i 's/<nom-de-la-vostra-base-de-dades>/bellavista-nieto/g' comandes-exemple.txt
+sudo sed -i 's/<usuari-de-connexio-a-la-base-de-dades>/bellavistanieto/g' comandes-exemple.txt
+sudo sed -i 's/<contrasenya usuari de la connexió>/bellavistanieto123/g' comandes-exemple.txt
 ```
 
+<details><summary>Pitja per veure el contingut del fitxer comandes-exemple.txt desprès de l'execució de les comandes.</summary>
 
 Executem una comanda per veure com ha quedat el contingut del fitxer **```comandes-exemple.txt```**. 
 
@@ -387,7 +398,8 @@ cat comandes-exemple.txt
 
 * **Sortida**:
 
-<pre>
+
+```bash
 sudo docker image list |grep php:7.0-fpm
 
 sudo docker image list |grep nginx
@@ -400,18 +412,18 @@ sudo docker pull nginx
 
 sudo docker pull mariadb
 
-sudo mkdir ~/nieto-pardo
+sudo mkdir ~/bellavista-nieto
 
-cd ~/nieto-pardo
+cd ~/bellavista-nieto
 
-sudo mkdir ~/nieto-pardo/webSrv
+sudo mkdir ~/bellavista-nieto/webSrv
 
-sudo vi ~/nieto-pardo/webSrv/Dockerfile
+sudo vi ~/bellavista-nieto/webSrv/Dockerfile
 
 FROM nginx
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 
-sudo vi ~/nieto-pardo/webSrv/default.conf
+sudo vi ~/bellavista-nieto/webSrv/default.conf
 
 server {  
 
@@ -452,15 +464,15 @@ server {
      }  
     }	
     
-sudo git clone https://github.com/rapidcode-technologies-private-limited/php-e-commerce.git ~/nieto-pardo/phpSrv/
+sudo git clone https://github.com/rapidcode-technologies-private-limited/php-e-commerce.git ~/bellavista-nieto/phpSrv/
 
-sudo vi ~/nieto-pardo/phpSrv/Dockerfile
+sudo vi ~/bellavista-nieto/phpSrv/Dockerfile
 
 FROM php:7.0-fpm
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 RUN docker-php-ext-enable mysqli
 
-sudo vi ~/nieto-pardo/docker-compose.yml
+sudo vi ~/bellavista-nieto/docker-compose.yml
 
 version: "3.9"
 services:
@@ -486,31 +498,31 @@ services:
         -    mysql-data:/var/lib/mysql
       environment:  
        MYSQL_ROOT_PASSWORD: mariadb
-       MYSQL_DATABASE: nieto-pardo 
+       MYSQL_DATABASE: bellavista-nieto 
 
 volumes:
     mysql-data:
     
-cd ~/nieto-pardo/
+cd ~/bellavista-nieto/
 sudo docker compose up -d
 
 sudo docker container list -a | grep db-1
 
-sudo docker exec -ti nieto-pardo-db-1 bash
+sudo docker exec -ti bellavista-nieto-db-1 bash
 
 mariadb -u root -pmariadb
 
-CREATE USER 'nietopardo'@'%' IDENTIFIED BY '<Contrasenya de l'usuari de connexió>';
+CREATE USER 'bellavistanieto'@'%' IDENTIFIED BY '<contrasenya-de-l-usuari-de-la-connexio>';
 
 SELECT user FROM mysql.user;
 
-GRANT ALL PRIVILEGES ON *.* TO 'nietopardo'@'%';
+GRANT ALL PRIVILEGES ON *.* TO 'bellavistanieto'@'%';
 
 FLUSH PRIVILEGES;
 
 show databases;
 
-use nieto-pardo;
+use bellavista-nieto;
 
 CREATE TABLE products(
   id mediumint(8) unsigned NOT NULL auto_increment,
@@ -534,9 +546,11 @@ exit
 
 exit
 
-cd ~/nieto-pardo/phpSrv
+cd ~/bellavista-nieto/phpSrv
 
 sudo vi index.php
 
-$link = mysqli_connect('db', 'nietopardo', 'nietopardo123', 'nieto-pardo');
-</pre>
+$link = mysqli_connect('db', 'bellavistanieto', 'bellavistanieto123', 'bellavista-nieto');
+```
+<hr>
+</details>
