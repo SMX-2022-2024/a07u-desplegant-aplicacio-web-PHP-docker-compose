@@ -23,8 +23,10 @@ Els grups han quedat de la següent manera:
   <tr>
   <td>7422</td><td>Román Robles, Àlex</td>
 </tr>
+<tr><td colspan="6"></td></tr>
 <tr><td>7674</td><td>Boada Cirera, Jan</td><td rowspan="2" style="text-align: center;">Grup&nbsp;02</td><td rowspan="2" style="text-align: center;">boada-cot</td><td rowspan="2" style="text-align: center;">boadacot</td><td rowspan="2" style="text-align: center;">boadacot123</td></tr>
 <tr><td>7596</td><td>Cot Fontanella, Marc</td></tr>
+<tr><td colspan="6"></td></tr>
 <tr><td>7582</td><td>Bollero Ruzafa, Ivan</td><td rowspan="2" style="text-align: center;">Grup&nbsp;03</td><td rowspan="2" style="text-align: center;">bollero-pan</td><td rowspan="2" style="text-align: center;">bolleropan</td><td rowspan="2" style="text-align: center;">bolleropan123</td></tr>
 <tr><td>7683</td><td>Pan , Jiahao</td></tr>
 <tr><td>7572</td><td>Capel Vallbona, Marc</td><td rowspan="2" style="text-align: center;">Grup&nbsp;04</td><td rowspan="2" style="text-align: center;">capel-codina</td><td rowspan="2" style="text-align: center;">capelcodina</td><td rowspan="2" style="text-align: center;">capelcodina123</td></tr>
