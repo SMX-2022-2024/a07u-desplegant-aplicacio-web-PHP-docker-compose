@@ -632,7 +632,7 @@ cd ~/<CognomAlumne1>-<CognomAlumne2>/phpSrv
 sudo vi index.php
 ```
 
-Cal que ens desplacem a la **línia ```177```** a on trobarem el següent:
+Cal que ens desplacem a la **línia ```106```** a on trobarem el següent:
 
 ![imatge-codi.png](./img/imatge-codi-inicial.png)
 
