@@ -685,16 +685,16 @@ Els errors poden ser diferents, dependrà de la informació que aparegui a l'err
 
 L'**```Error MySQL 1045```** se sol produir quan intentes accedir a la teva base de dades **MySQL**. La petició serà denegada si el servidor creu que l'usuari no està autoritzat a fer l'acció. Per exemple, potser utilitzeu una contrasenya incorrecta o que no tingueu els permisos necessaris.
 
-**Motiu**: No heu modificat correctament la **línia ```177```** del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php```**.
+**Motiu**: No heu modificat correctament la **línia ```106```** del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php```**.
 
 ### **```Error MySQL 1049```**
 
 
-**Motiu**: No heu modificat correctament la **línia ```177```** del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php```**.
+**Motiu**: No heu modificat correctament la **línia ```106```** del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php```**.
 
 o
 
-**Motiu**: No heu creat correctament la base de dades al fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/docker-compose.yml```**, per tant, la base de dades no existeix o el **nom de la base de dades** que heu definit al fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/docker-compose.yml```** és diferent al que heu escrit a la **línia ```177```** del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php```**.
+**Motiu**: No heu creat correctament la base de dades al fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/docker-compose.yml```**, per tant, la base de dades no existeix o el **nom de la base de dades** que heu definit al fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/docker-compose.yml```** és diferent al que heu escrit a la **línia ```106```** del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php```**.
 
 ![Alt text](./img/imatge-error-1049-db.png)
 
@@ -703,63 +703,63 @@ o
 
 Hi ha una comanda a **```linux```** que és  **```sed```** (***stream editor*** -> **editor de flux**), es tracta d'un editor de text de línia d'ordres no interactiu.
 
-Per exemple:
-
-Creem un fitxer de text anomenat **```test.txt```** amb el següent contingut:
-
-```txt
-sudo vi ~/test.txt
-```
-
-I el contingut del fitxer **```~/test.txt```** és el següent:
- 
-```txt
-La fruita és bona.
-La platja m'agrada.
-```
-
-Confirmem el contigut de **```~/test.txt```**.
-
-```txt
-cat ~/test.txt
-```
-
-* **Sortida**:
-
-<pre>
-joan@ubuntudocker2:~/$ cat ~/test.txt 
-La fruita és bona.
-La platja m'agrada.
-joan@ubuntudocker2:~/$ 
-</pre>
-
-Farem servir la comanda **```sed```** per substituir l'expressió **```fruita```** per **```vida```** de la següent manera:
-
-```txt
-sed -i 's/fruita/vida/g' ~/test.txt
-```
-
-* **Sortida**:
-
-<pre>
-joan@ubuntudocker2:~$ sed -i 's/fruita/vida/g' ~/test.txt
-joan@ubuntudocker2:~$
-</pre>
-
-Tornem a confirmar el contigut de **```~/test.txt```**.
-
-```txt
-cat ~/test.txt
-```
-
-* **Sortida**:
-
-<pre>
-joan@ubuntudocker2:~/$ cat ~/test.txt 
-La vida és bona.
-La platja m'agrada.
-joan@ubuntudocker2:~/$ 
-</pre>
+> Per exemple:
+> 
+> Creem un fitxer de text anomenat **```test.txt```** amb el següent contingut:
+> 
+> ```txt
+> sudo vi ~/test.txt
+> ```
+> 
+> I el contingut del fitxer **```~/test.txt```** és el següent:
+>  
+> ```txt
+> La fruita és bona.
+> La platja m'agrada.
+> ```
+> 
+> Confirmem el contigut de **```~/test.txt```**.
+> 
+> ```txt
+> cat ~/test.txt
+> ```
+> 
+> * **Sortida**:
+> 
+> <pre>
+> joan@ubuntudocker2:~/$ cat ~/test.txt 
+> La fruita és bona.
+> La platja m'agrada.
+> joan@ubuntudocker2:~/$ 
+> </pre>
+> 
+> Farem servir la comanda **```sed```** per substituir l'expressió **```fruita```** per **```vida```** de la següent manera:
+> 
+> ```txt
+> sed -i 's/fruita/vida/g' ~/test.txt
+> ```
+> 
+> * **Sortida**:
+> 
+> <pre>
+> joan@ubuntudocker2:~$ sed -i 's/fruita/vida/g' ~/test.txt
+> joan@ubuntudocker2:~$
+> </pre>
+> 
+> Tornem a confirmar el contigut de **```~/test.txt```**.
+> 
+> ```txt
+> cat ~/test.txt
+> ```
+> 
+> * **Sortida**:
+> 
+> <pre>
+> joan@ubuntudocker2:~/$ cat ~/test.txt 
+> La vida és bona.
+> La platja m'agrada.
+> joan@ubuntudocker2:~/$ 
+> </pre>
 
 
 L'ajuda de la comanda **```sed```** és la següent:
@@ -814,7 +814,21 @@ joan@ubuntudocker2:~/nieto-pardo/phpSrv$
 
 Cal que modifqueu del fitxer **```~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php```** la seguent informació:
 
-|Paraula<br>a canviar|Nova<br>paraula|
+Per tant, finalment les comandes que fareu quedaran de la següent manera:
+
+> ```bash
+> sed -i 's/<Cadena a canviar>/<nova cadena>/g' ~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php
+> ```
+> 
+> * **Exemple de sortida de l'exemple**:
+> 
+> <pre>
+> joan@ubuntudocker2:~$ sed -i 's/Rapidcode E-Commerce/Ginebró comerç electrònic/g' ~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/index.php
+> joan@ubuntudocker2:~$
+> </pre>
+
+
+|Cadena<br>a canviar|Nova<br>cadena|
 |----|----|
 |Rapidcode E-Commerce|Ginebró comerç electrònic|
 |Laptops|Portàtils|
