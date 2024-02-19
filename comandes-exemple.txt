@@ -1,28 +1,22 @@
 
-sudo docker image list |grep php:7.0-fpm
+sudo docker container list -a
 
-sudo docker image list |grep nginx
+sudo docker image list
 
-sudo docker image list |grep mariadb
+sudo mkdir ~/bellavista-nieto
 
-sudo docker pull php:7.0-fpm
+cd ~/bellavista-nieto
 
-sudo docker pull nginx
+sudo mkdir ~/bellavista-nieto/webSrv
 
-sudo docker pull mariadb
-
-sudo mkdir ~/<CognomAlumne1>-<CognomAlumne2>
-
-cd ~/<CognomAlumne1>-<CognomAlumne2>
-
-sudo mkdir ~/<CognomAlumne1>-<CognomAlumne2>/webSrv
-
-sudo vi ~/<CognomAlumne1>-<CognomAlumne2>/webSrv/Dockerfile
+sudo vi ~/bellavista-nieto/webSrv/Dockerfile
 
 FROM nginx
 COPY ./default.conf /etc/nginx/conf.d/default.conf
 
-sudo vi ~/<CognomAlumne1>-<CognomAlumne2>/webSrv/default.conf
+cat ~/bellavista-nieto/webSrv/Dockerfile
+
+sudo vi ~/bellavista-nieto/webSrv/default.conf
 
 server {  
 
@@ -63,15 +57,17 @@ server {
      }  
     }	
     
-sudo git clone https://github.com/rapidcode-technologies-private-limited/php-e-commerce.git ~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/
+sudo git clone https://github.com/rapidcode-technologies-private-limited/php-e-commerce.git ~/bellavista-nieto/phpSrv/
 
-sudo vi ~/<CognomAlumne1>-<CognomAlumne2>/phpSrv/Dockerfile
+sudo vi ~/bellavista-nieto/phpSrv/Dockerfile
 
 FROM php:7.0-fpm
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 RUN docker-php-ext-enable mysqli
 
-sudo vi ~/<CognomAlumne1>-<CognomAlumne2>/docker-compose.yml
+cat ~/bellavista-nieto/phpSrv/Dockerfile
+
+sudo vi ~/bellavista-nieto/docker-compose.yml
 
 version: "3.9"
 services:
@@ -97,31 +93,35 @@ services:
         -    mysql-data:/var/lib/mysql
       environment:  
        MYSQL_ROOT_PASSWORD: mariadb
-       MYSQL_DATABASE: <nom-de-la-vostra-base-de-dades> 
+       MYSQL_DATABASE: bellavista-nieto 
 
 volumes:
     mysql-data:
-    
-cd ~/<CognomAlumne1>-<CognomAlumne2>/
+
+
+cat ~/bellavista-nieto/docker-compose.yml
+
+cd ~/bellavista-nieto/
+
 sudo docker compose up -d
 
 sudo docker container list -a | grep db-1
 
-sudo docker exec -ti <CognomAlumne1>-<CognomAlumne2>-db-1 bash
+sudo docker exec -ti bellavista-nieto-db-1 bash
 
 mariadb -u root -pmariadb
 
-CREATE USER '<usuari-de-connexio-a-la-base-de-dades>'@'%' IDENTIFIED BY '<contrasenya-de-l-usuari-de-la-connexio>';
+show databases;
+
+CREATE USER 'bellavistanieto'@'%' IDENTIFIED BY 'bellavistanieto123';
 
 SELECT user FROM mysql.user;
 
-GRANT ALL PRIVILEGES ON *.* TO '<usuari-de-connexio-a-la-base-de-dades>'@'%';
+GRANT ALL PRIVILEGES ON *.* TO 'bellavistanieto'@'%';
 
 FLUSH PRIVILEGES;
 
-show databases;
-
-use <nom-de-la-vostra-base-de-dades>;
+use bellavista-nieto;
 
 CREATE TABLE products(
   id mediumint(8) unsigned NOT NULL auto_increment,
@@ -145,8 +145,32 @@ exit
 
 exit
 
-cd ~/<CognomAlumne1>-<CognomAlumne2>/phpSrv
+cd ~/bellavista-nieto/phpSrv
 
 sudo vi index.php
 
-$link = mysqli_connect('db', '<usuari-de-connexio-a-la-base-de-dades>', '<contrasenya-de-l-usuari-de-la-connexio>', '<nom-de-la-vostra-base-de-dades>');
+grep -n '$link = mysqli_connect' ~/bellavista-nieto/phpSrv/index.php
+
+sudo sed -n 5p  -i 's/rapidcode/bellavistanieto/g' ~/bellavista-nieto/phpSrv/index.php
+
+sudo sed -n 5p -i 's/ecomdb/bellavista-nieto/g' ~/bellavista-nieto/phpSrv/index.php
+
+$link = mysqli_connect('db', 'bellavistanieto', 'bellavistanieto123', 'bellavista-nieto');
+
+sudo sed -i 's/Rapidcode E-Commerce/Ginebró comerç electrònic/g' ~/bellavista-nieto/phpSrv/index.php
+sudo sed -i 's/Purchase/Compra\<b\>/g' ~/bellavista-nieto/phpSrv/index.php
+sudo sed -i 's/al preu més econòmic\<\/b\>/<\/b\>al preu més econòmic/g' ~/bellavista-nieto/phpSrv/index.php
+
+sudo sed -i 's/Laptops/Portàtils/g' ~/bellavista-nieto/phpSrv/index.php
+sudo sed -i 's/Drones/Drons/g' ~/bellavista-nieto/phpSrv/index.php
+sudo sed -i 's/Gadgets/Gadgets/g' ~/bellavista-nieto/phpSrv/index.php
+sudo sed -i 's/Phones/Telèfons/g' ~/bellavista-nieto/phpSrv/index.php
+sudo sed -i 's/VR/RV/g' ~/bellavista-nieto/phpSrv/index.php
+sudo sed -i 's/Contact us/Contacta amb nosaltres/g' ~/bellavista-nieto/phpSrv/index.php
+
+sudo sed -i 's/Make Your Shopping Easy/La teva compra fàcil/g' ~/bellavista-nieto/phpSrv/index.php
+sudo sed -i 's/Find everything accordingly/Troba-ho tot!/g' ~/bellavista-nieto/phpSrv/index.php
+sudo sed -i 's/SHOW NOW!/Compra ara/g' ~/bellavista-nieto/phpSrv/index.php
+sudo sed -i 's/Product List/Llista de productes/g' ~/bellavista-nieto/phpSrv/index.php
+
+sudo sed -i 's/$</€</g' ~/bellavista-nieto/phpSrv/index.php

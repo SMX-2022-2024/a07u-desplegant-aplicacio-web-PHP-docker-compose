@@ -1,12 +1,12 @@
 # **TOTES** les comandes per fer l'activitat
 
-En el fitxer d'aquest repositori teniu el fitxer [**```comandes.txt```**](./comandes.txt) que conté **TOTES** les comandes necessaries per fer l'activitat.
+En el fitxer d'aquest repositori teniu el fitxer [**```comandes.txt```**](./comandes.txt) que conté **TOTES** les comandes necessàries per fer l'activitat.
 
 Les comandes apareixen amb un seguit de cadenes de text genèriques, de manera que es poden substituir amb els valors que hi ha la [taula dels grups](./README.md#taula-dels-grups) que apareix a l'inici de l'activitat.
 
-A la columna **Exemple**, apareix una cadena de text, que es farà servir com  exemple per poder explicar com cal fer les substitucions.
+A la columna **Exemple**, apareix una cadena de text, que es farà servir com exemple per poder explicar com cal fer les substitucions.
 
-Us recordo que de les cadenes de text a substituir **sempre cal incloure** els caracters **```<```** **```>```**, ja que apareixen com a **delimitadors** de les cadenes de text genèriques.
+Us recordo que de les cadenes de text a substituir **sempre cal incloure** els caràcters **```<```** **```>```**, ja que apareixen com a **delimitadors** de les cadenes de text genèriques.
 
 A continuació es facilita una relació les cadenes de text genèriques i com es poden substituir.
 
